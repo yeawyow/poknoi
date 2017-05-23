@@ -3471,7 +3471,18 @@ box-thumbnail:hover{
   /*  background-color: #3e8e41;*/
 }
 
-.slider img{
+
+@media screen and ( min-width: 768px ){
+    .slider img{
+    width: 100px;
+    height: 400px;
+}
+}
+@media screen and ( min-width: 1024px ){
+    
+    .slider img{
     width: 1000px;
-    height: auto;
+    height: 400px;
+}
+
 }
