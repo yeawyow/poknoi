@@ -1,22 +1,22 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>เทศบาลตำบลพอกน้อย | www.poknoi.go.th</title>
-        <meta name="description" content="">
-        <meta property="og:title" content="" >
-        <meta property="og:site_name" content="">
-        <meta property="og:description" content="" >
-        <meta property="og:image" content="" >
+        <meta name="description" content="เทศบาลตำบลพอกน้อย">
+        <meta property="og:title" content="เทศบาลตำบลพอกน้อย" >
+        <meta property="og:site_name" content="เทศบาลตำบลพอกน้อย">
+        <meta property="og:description" content="เทศบาลตำบลพอกน้อย" >
+        <meta property="og:image" content="เทศบาลตำบลพอกน้อย" >
 
         <meta property="og:type" content="article" >
        
 
        
 
-        <link rel="manifest" href="">
+        <link rel="manifest" href="เทศบาลตำบลพอกน้อย">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="">
         <meta name="theme-color" content="#ffffff">
@@ -100,8 +100,8 @@
                 </div>
             </div>
         </header><!-- /header -->
-        <div> </div>
-        <div class="highlightSlider " id="container_body1">
+        
+            <div class="highlightSlider  " id="container_body1">
             <div class="sliderItems">
 
 
@@ -125,12 +125,12 @@
 
                 </div>
             </div>
-        </div>
+        </div> 
+           
+       
         <h2></h2>
         <div  id="container_body2">
             <div class="container">
-
-
                 <div class="clearfix"></div>
                 <ul class="tabs">
                     <li class="active nocount" data-rel="tab1"><span>ข่าวประชาสัมพันธ์</span><div class="c">0</div></li>
@@ -556,8 +556,8 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="logoFooter">
-                                        <p class="logo"><a href=""><img src="" alt="กรมการขนส่งทางบก"></a></p>
-                                        <p class="text"><a href="15">กรมการขนส่งทางบก<span>Department of Land Transport</span></a></p>
+                                        <p class="logo"><a href=""><img src="" alt="เทศบาลตำบลพอกน้อย"></a></p>
+                                        <p class="text"><a href="15">เทศบาลตำบลพอกน้อย<span>อำเภอพรรณานิคม จังหวัดสกลนคร</span></a></p>
                                     </div>
                                 </div>
                                 <div class="col-sm-8 copyright">
@@ -574,14 +574,14 @@
 
             </div>
             <script src="https://www.dlt.go.th/th/js/all-vendor.js"></script>
-            <script src="https://www.dlt.go.th/th/js/jquery-th-ui-1.10.3.min.js"></script>
+            <script src="script/jquery-ui.js"></script>
 
-            <script src="https://www.dlt.go.th/th/js/alert/promise.min.js"></script>
-            <script src="https://www.dlt.go.th/th/js/popup/jquery.magnific-popup.min.js"></script>
+   
+            <script src="script/magnificPopup.js"></script>
 
-            <script src="https://www.dlt.go.th/th/js/plugin.js"></script>
+            <script src="script/plugin.js"></script>
             <script src="script/main.js"></script>
-            <script src="https://www.dlt.go.th/th/js/modules/home/index.js"></script>
+            <script src="script/index.js"></script>
 
     </body>
 </html>

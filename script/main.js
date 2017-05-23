@@ -561,24 +561,7 @@ jQuery(document).ready(function($) {
     }
   });
 
-   setTimeout(function(){
-    $(".btnSharePageUrl").socialShare({
-      social: 'facebook,google,linkedin,pinterest,twitter',
-      whenSelect: true,
-      selectContainer: '.btnMultiShare'
-    });
-    $(".btnMultiShareLink").each(function(index,el){
-      var url = $(this).attr("href");
-      $(this).socialShare({
-        social: 'facebook,google,linkedin,pinterest,twitter',
-        whenSelect: true,
-        selectContainer: '.btnMultiShare',
-        shareUrl:url
-      });
-      $(this).attr("href","javascript:;").removeClass('btnMultiShareLink');
-    })
-    $("a._blank").attr("target","_blank");
-  },500);  
+  
   $(document).on("mouseenter",".btnMultiShareLink",function(){
     var url = $(this).attr("href");
     $(this).socialShare({
