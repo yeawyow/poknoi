@@ -3472,17 +3472,13 @@ box-thumbnail:hover{
 }
 
 
-@media screen and ( min-width: 768px ){
-    .slider img{
-    width: 100px;
-    height: 400px;
-}
-}
-@media screen and ( min-width: 1024px ){
-    
-    .slider img{
-    width: 1200px;
-    height: 400px;
+.slider {
+    float: left;
 }
 
+.ceo-box{
+    float: right;
+    margin: 5px;
+    width:250px ;
+    
 }

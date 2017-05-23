@@ -1893,7 +1893,7 @@ div.thumbnail {
 
 .highlightSlider {
   background: transparent url("../img/01/tg.png") no-repeat scroll center center;
-  height: 550px;
+  height: 430px;
   min-height: auto;
   background-size: cover;
   overflow: hidden; }

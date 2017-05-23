@@ -104,13 +104,15 @@
             <div class="highlightSlider  ">
 
                 <div class="sliderItem">
-                    <div class="slider" >
+                    <div class="slider " >
                         <img src="img/tt.jpg">
+                        
 
                     </div>
-                    <div style="background-color: black;" >
-                        ddd
-                    </div>
+                    <img class="ceo-box" src="img/p.jpg">
+<img class="ceo-box" src="img/p.jpg">
+                     <img class="ceo-box" src="img/p.jpg">
+<img class="ceo-box" src="img/p.jpg">
 
                 </div>
 
