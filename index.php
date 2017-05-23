@@ -12,9 +12,9 @@
         <meta property="og:image" content="เทศบาลตำบลพอกน้อย" >
 
         <meta property="og:type" content="article" >
-       
 
-       
+
+
 
         <link rel="manifest" href="เทศบาลตำบลพอกน้อย">
         <meta name="msapplication-TileColor" content="#ffffff">
@@ -28,7 +28,7 @@
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
-      
+
         <link rel="stylesheet" href="theme/css/styles.css">
         <link rel="stylesheet" href="https://www.dlt.go.th/th/css/slider.css">
         <link rel="stylesheet" href="theme/css/main.css">
@@ -56,12 +56,12 @@
                             <div class="wingwing"></div>
                         </div>
                         <div class="headerNavigation">
-                           
+
                             <div class="headerNavigation_lg">
                                 <ul class="list-inline">
                                     <li><a class="txtautosize hover_unterline" href=""><span class="fa fa-home"></span> หน้าแรก</a></li>
                                     <li><a class="txtautosize hover_unterline _blank" href=""><span class="fa fa-address-book"></span> รับเรื่องร้องเรียน</a></li>
-                                     <li><a class="txtautosize hover_unterline _blank" href=""><span class="fa fa-sign-in"></span> เข้าสู่ระบบ</a></li>
+                                    <li><a class="txtautosize hover_unterline _blank" href=""><span class="fa fa-sign-in"></span> เข้าสู่ระบบ</a></li>
 
                                 </ul>
                             </div>
@@ -92,7 +92,7 @@
                         <div class="dropdown-content">
                             <a href="#">2560</a>
                             <a href="#">2559</a>
-                         
+
                         </div>
                     </div>
                     <button class="dropbtn">ให้บริการประชาชน</button>
@@ -100,8 +100,8 @@
                 </div>
             </div>
         </header><!-- /header -->
-        
-            <div class="highlightSlider  " id="container_body1">
+
+        <div class="highlightSlider  " id="container_body1">
             <div class="sliderItems">
 
 
@@ -117,17 +117,12 @@
                 </div>
             </div>
 
-            <div class="linkSlider">
-                <div class="row">
-                    <div class="col-sm-12 linkService">
-                        <a href="javascript:;" onclick="open_service('ONLINE SERVICE', 1);"><span>บริการผ่านอินเตอร์เน็ต</span><span class="mg-l-5 sprite sprite-ico-online-service"></span></a>
-                    </div>
-
-                </div>
+            <div >
+               ddd
             </div>
         </div> 
-           
-       
+
+
         <h2></h2>
         <div  id="container_body2">
             <div class="container">
@@ -556,7 +551,7 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="logoFooter">
-                                        <p class="logo"><a href=""><img src="" alt="เทศบาลตำบลพอกน้อย"></a></p>
+                                        <p class="logo"><a href=""><img src="img/logo.jpg" alt="เทศบาลตำบลพอกน้อย"></a></p>
                                         <p class="text"><a href="15">เทศบาลตำบลพอกน้อย<span>อำเภอพรรณานิคม จังหวัดสกลนคร</span></a></p>
                                     </div>
                                 </div>
@@ -569,14 +564,15 @@
                         </div>
                     </div>
 
-
                 </div>
 
             </div>
-            <script src="https://www.dlt.go.th/th/js/all-vendor.js"></script>
+
+
+            <script src="script/jquery.js"></script>
             <script src="script/jquery-ui.js"></script>
 
-   
+
             <script src="script/magnificPopup.js"></script>
 
             <script src="script/plugin.js"></script>

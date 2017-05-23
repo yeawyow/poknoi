@@ -1789,81 +1789,12 @@ div.thumbnail {
 @media screen and (max-width: 767px) {
   .box-slider-wrap .box-slider .text {
     font-size: 20px; } }
-.linkSlider {
-  max-width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(77, 43, 104, 0.89);
-  overflow: hidden;
-  z-index: 2; }
 
-.linkSlider > div > div > a {
-  display: block;
-  height: 80px;
-  line-height: 80px;
-  font-size: 30px;
-  color: #fff; }
 
-.linkSlider > div > div > a {
-  font-size: 35px;
-  height: 95px;
-  line-height: 95px; }
 
-.linkSlider > div > div > a i {
-  position: relative; }
-
-.linkSlider > div > div > a:hover {
-  text-decoration: none;
-  background-color: #d6bf64; }
-
-.linkSlider .linkService {
-  padding-right: 0; }
-
-.linkSlider .linkService a {
-  padding-right: 30px;
-  text-align: right;
-  border-right: 1px #9e8aaa solid;
-  -webkit-transition: 0.3s all ease-in-out;
-  -moz-transition: 0.3s all ease-in-out;
-  -ms-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out; }
 
 @media screen and (min-width: 1200px) {
-  .linkSlider .linkService a {
-    padding-right: 85px; } }
-@media screen and (max-width: 767px) {
-  .linkSlider .linkService a {
-    border-right: none;
-    border-bottom: 1px #9e8aaa solid; } }
-.linkSlider .linkService a i {
-  margin-left: 20px;
-  top: 6px; }
-
-@media screen and (min-width: 1200px) {
-  .linkSlider .linkService a i {
-    margin-left: 40px;
-    top: 4px; } }
-.linkSlider .linkKnowledge {
-  padding-left: 0; }
-
-.linkSlider .linkKnowledge a {
-  padding-left: 30px; }
-
-@media screen and (min-width: 1200px) {
-  .linkSlider .linkKnowledge a {
-    padding-left: 115px; } }
-.linkSlider .linkKnowledge a i {
-  margin-right: 15px;
-  top: 8px; }
-
-@media screen and (min-width: 1200px) {
-  .linkSlider .linkKnowledge a i {
-    margin-right: 30px;
-    top: 4px; } }
+ 
 .slider-progress {
   position: absolute;
   left: 0;
