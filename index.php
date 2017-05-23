@@ -109,11 +109,9 @@
                         
 
                     </div>
-                    <img class="ceo-box" src="img/p.jpg">
-<img class="ceo-box" src="img/p.jpg">
-                     <img class="ceo-box" src="img/p.jpg">
-<img class="ceo-box" src="img/p.jpg">
-
+                    <div class="ceo-box">
+                  
+                    </div>
                 </div>
 
             </div> 

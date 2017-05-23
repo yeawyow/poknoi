@@ -3472,13 +3472,17 @@ box-thumbnail:hover{
 }
 
 
-.slider {
-    float: left;
+.slider img {
+   
+    width: 100px;
+    
 }
 
 .ceo-box{
     float: right;
     margin: 5px;
-    width:250px ;
-    
+width:500px;    
+}
+.ceo-box img{
+    width: 250px;
 }
