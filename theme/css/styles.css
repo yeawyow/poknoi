@@ -3470,3 +3470,8 @@ box-thumbnail:hover{
 .dropdown:hover .dropbtn {
   /*  background-color: #3e8e41;*/
 }
+
+.slider img{
+    width: 1000px;
+    height: auto;
+}
