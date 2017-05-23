@@ -30,7 +30,7 @@
 
 
         <link rel="stylesheet" href="theme/css/styles.css">
-        <link rel="stylesheet" href="https://www.dlt.go.th/th/css/slider.css">
+        <link rel="stylesheet" href="theme/css/slider.css">
         <link rel="stylesheet" href="theme/css/main.css">
 
         <link rel="stylesheet" type="text/css" href="theme/css/index.css">
@@ -100,27 +100,23 @@
                 </div>
             </div>
         </header><!-- /header -->
-
-        <div class="highlightSlider  " id="container_body1">
-            <div class="sliderItems">
-
-
+        <div class="row">
+            <div class="highlightSlider  ">
 
                 <div class="sliderItem">
+                    <div class="slider" >
+                        <img src="img/tt.jpg">
 
-
+                    </div>
+                    <div style="background-color: black;" >
+                        ddd
+                    </div>
 
                 </div>
-                <div class="sliderItem">
 
+            </div> 
+        </div>
 
-                </div>
-            </div>
-
-            <div >
-               ddd
-            </div>
-        </div> 
 
 
         <h2></h2>
