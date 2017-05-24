@@ -3471,18 +3471,20 @@ box-thumbnail:hover{
   /*  background-color: #3e8e41;*/
 }
 
-
+.slider{
+    float: left;
+   margin-left: 55px;  
+}
 .slider img {
-   
-    width: 100px;
-    
+    width: 948px;
+  
 }
 
 .ceo-box{
-    float: right;
-    margin: 5px;
-width:500px;    
+  float: left;
+  margin-left: 10px;
+background-color: black;
 }
 .ceo-box img{
-    width: 250px;
+    
 }

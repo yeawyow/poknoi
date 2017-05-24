@@ -13,9 +13,6 @@
 
         <meta property="og:type" content="article" >
 
-
-
-
         <link rel="manifest" href="เทศบาลตำบลพอกน้อย">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="">
@@ -24,7 +21,9 @@
         <meta name="robots" CONTENT="index, follow" >
         <meta name="googlebot" CONTENT="index, follow" >
         <meta name="revisit-after" CONTENT="1 days" >
-        <meta name="viewport" content="width=1440, initial-scale=0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="theme/css/normalize.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
@@ -109,8 +108,8 @@
                         
 
                     </div>
-                    <div class="ceo-box">
-                  
+                    <div class="ceo-box" >
+                        <img src="img/ceo.jpg">
                     </div>
                 </div>
 
