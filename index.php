@@ -38,6 +38,7 @@ $Db = new MySqlConn;
 
         <link rel="stylesheet" type="text/css" href="theme/css/index.css">
         <link rel="stylesheet" href="theme/css/responsive.css">
+        <link rel="stylesheet" href="script/slider/slider.css">
 <style>
 .mySlides {display:none;}
 </style>
@@ -183,6 +184,14 @@ $Db = new MySqlConn;
             <script src="script/plugin.js"></script>
             <script src="script/main.js"></script>
             <script src="script/index.js"></script>
-
+            <script src="script/slider/jquery.flexslider-min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.flexslider').flexslider({
+            animation: 'fade',
+            controlsContainer: '.flexslider'
+        });
+    });
+</script>
     </body>
 </html>

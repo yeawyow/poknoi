@@ -3326,15 +3326,79 @@ box-thumbnail:hover{
     margin-left: 0px;  
 }
 .slider img {
-    padding: 50px;
+    padding: 0px;
     width: 948px;
 
 }
 .ceo-box{
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
     text-align: center;
 }
+  .highlightSlider {
+  position: relative;
+  height: auto;
+}
+/* screen 1920 */
+@media screen and (max-width: 1024px) {
+    .headerBrand {
+        float: left;
+        width: 100px;
+        height: 80px;
+        position: relative;
+        padding: 5px 0
+    }
+    .headerBrand img {
+        width: 50px;
+        margin: 5px;
+    }
+
+    .headerBrand .headerBrandText {
+        position: absolute;
+        top: 10px;
+        left: 60px;
+    }
+
+    .headerBrand .headerBrandText .headerBrandTextInner {
+        font-size: 30px;
+        color: #7b41b3;
+        line-height: 0.8;
+        letter-spacing: -1px;
+        white-space: nowrap;
+        padding-bottom:7px;
+    }
+
+    .headerBrand .headerBrandText .headerBrandTextInner+.headerBrandTextInner {
+        font-size: 14px;
+        color: #8b8096
+    } 
+
+    .afterHeader {
+        position: relative;
+        padding-left:0px;
+        padding-right:0px;
+
+    }
+    .slider img {
+        padding: 0px;
+        width:738px;
+
+    }
+    .ceo-box{
+        margin-left: 38px;
+        text-align: center;
+        font-size:0.7em;
+    }
+    .ceo-box img{
+        width:200px;
+    }
+    .highlightSlider {
+  position: relative;
+  
+}
+}
+/* end screen 1920 */
+
 /* screen 1024 */
 @media screen and (max-width: 1024px) {
     .headerBrand {

@@ -1,5 +1,5 @@
 
-<div class="row">
+<div class="container">
     <div class="highlightSlider  ">
 
         <div class="sliderItem">
@@ -7,22 +7,21 @@
               <div class="flex-container">
     <div class="flexslider">
         <ul class="slides">
+               <?php
+                    $sql = $Db->query('SELECT *  FROM announce  order by id desc limit 4', '');
+                    foreach ($sql as $row) {
+                        ?>
             <li>
-                <a href="#"><img src="img/slider/1478096033.jpg" /></a>
+                <a href="?app=main&p=announce_content&id=<?php echo $row['id'] ?>&topic=<?php echo $row['topic'] ?>"><img src="img/slider/<?php echo $row['image']?>" /></a>
+                <?php echo $row['content2'];?>
+                
             </li>
-            <li>
-                <img src="img/slide2.jpg" />
-            </li>
-            <li>
-                <img src="img/slide3.jpg" />
-                <p>Designing The Well-Tempered Web</p>
-            </li>
+                    <?PHP } ?>
+          
         </ul>
     </div>
 </div>
-              
-                
-            </div>
+         </div>
             <div class="ceo-box" >
                 <img src="img/ceo.jpg">
                 <br>
