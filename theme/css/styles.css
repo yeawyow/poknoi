@@ -1,58 +1,58 @@
 /* thai */
 @font-face {
-  font-family: 'Kanit';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Kanit ExtraLight'), local('Kanit-ExtraLight'), url(https://fonts.gstatic.com/s/kanit/v2/H2uw-adGyIIXNapOSlw5XRTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
-  unicode-range: U+0E01-0E5B, U+200B-200D, U+25CC;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Kanit ExtraLight'), local('Kanit-ExtraLight'), url(https://fonts.gstatic.com/s/kanit/v2/H2uw-adGyIIXNapOSlw5XRTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+    unicode-range: U+0E01-0E5B, U+200B-200D, U+25CC;
 }
 /* vietnamese */
 @font-face {
-  font-family: 'Kanit';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Kanit ExtraLight'), local('Kanit-ExtraLight'), url(https://fonts.gstatic.com/s/kanit/v2/GlwqxL8e4uUk1yTTqmypsBTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Kanit ExtraLight'), local('Kanit-ExtraLight'), url(https://fonts.gstatic.com/s/kanit/v2/GlwqxL8e4uUk1yTTqmypsBTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
-  font-family: 'Kanit';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Kanit ExtraLight'), local('Kanit-ExtraLight'), url(https://fonts.gstatic.com/s/kanit/v2/VnvRJEDa2zociVhyX9G4QhTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Kanit ExtraLight'), local('Kanit-ExtraLight'), url(https://fonts.gstatic.com/s/kanit/v2/VnvRJEDa2zociVhyX9G4QhTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'Kanit';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Kanit ExtraLight'), local('Kanit-ExtraLight'), url(https://fonts.gstatic.com/s/kanit/v2/ILRJxvacvDA7qSNYAE2Em_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Kanit ExtraLight'), local('Kanit-ExtraLight'), url(https://fonts.gstatic.com/s/kanit/v2/ILRJxvacvDA7qSNYAE2Em_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 @font-face {
-  font-family: "Flaticon01";
-  src: url("../fonts/icon-01/font/flaticon.cssFlaticon.eot");
-  src: url("../fonts/icon-01/font/Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/icon-01/font/Flaticon.woff") format("woff"),
-       url("../fonts/icon-01/font/Flaticon.ttf") format("truetype"),
-       url("../fonts/icon-01/font/Flaticon.svg#Flaticon") format("svg");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Flaticon01";
+    src: url("../fonts/icon-01/font/flaticon.cssFlaticon.eot");
+    src: url("../fonts/icon-01/font/Flaticon.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/icon-01/font/Flaticon.woff") format("woff"),
+        url("../fonts/icon-01/font/Flaticon.ttf") format("truetype"),
+        url("../fonts/icon-01/font/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: "Flaticon01";
-    src: url("../fonts/icon-01/font/Flaticon.svg#Flaticon") format("svg");
-  }
+    @font-face {
+        font-family: "Flaticon01";
+        src: url("../fonts/icon-01/font/Flaticon.svg#Flaticon") format("svg");
+    }
 }
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-  font-family: Flaticon01;
-        font-size: 20px;
-font-style: normal;
+    font-family: Flaticon01;
+    font-size: 20px;
+    font-style: normal;
 }
 
 .flaticon-black:before { content: "\f100"; }
@@ -435,11 +435,11 @@ body {
 .box-thumbnail {
     margin-bottom: 20px;
     -webkit-transition:0.35s all ease
-    -moz-transition:0.35s all ease
-    -ms-transition:0.35s all ease
-    -o-transition:0.35s all ease
-    transition:0.35s all ease
-    
+        -moz-transition:0.35s all ease
+        -ms-transition:0.35s all ease
+        -o-transition:0.35s all ease
+        transition:0.35s all ease
+
 }
 box-thumbnail:hover{
     background:#fbfbfb;
@@ -492,7 +492,7 @@ box-thumbnail:hover{
     -ms-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     transition: 0.3s all ease;
-    
+
 }
 
 .box-thumbnail .img-thumbnail a .link {
@@ -533,7 +533,7 @@ box-thumbnail:hover{
     -ms-transition: transform 0.5s cubic-bezier(0.14, 0.33, 0.21, 1.35);
     -o-transition: transform 0.5s cubic-bezier(0.14, 0.33, 0.21, 1.35);
     transition: transform 0.5s cubic-bezier(0.14, 0.33, 0.21, 1.35);
-    
+
 }
 .box-thumbnail .img-thumbnail a .link > span > em{
     font-size: 35px;
@@ -558,12 +558,12 @@ box-thumbnail:hover{
 }
 
 .box-thumbnail:hover .img-thumbnail a img {
-/*     -webkit-transform: scale(1.1) rotate(-2deg);
-    -moz-transform: scale(1.1) rotate(-2deg);
-    -ms-transform: scale(1.1) rotate(-2deg);
-    -o-transform: scale(1.1) rotate(-2deg);
-    transform: scale(1.1) rotate(-2deg); */
-    
+    /*     -webkit-transform: scale(1.1) rotate(-2deg);
+        -moz-transform: scale(1.1) rotate(-2deg);
+        -ms-transform: scale(1.1) rotate(-2deg);
+        -o-transform: scale(1.1) rotate(-2deg);
+        transform: scale(1.1) rotate(-2deg); */
+
 }
 .box-thumbnail:hover .img-thumbnail a .link span {
     -webkit-transform: scale(1, 1);
@@ -610,7 +610,7 @@ box-thumbnail:hover{
 }
 
 .box-thumbnail .caption .detail .text-detail {
-    
+
     overflow: hidden;
     margin-bottom: 15px;
     font-size: 15px
@@ -621,11 +621,11 @@ box-thumbnail:hover{
     padding-left: 0;
     padding-right: 0;
     color: #a08dab;
-	font-size:12px;
+    font-size:12px;
 }
 
 .box-thumbnail .caption .detail .ico-share span {
-    
+
 }
 
 .link-readMore {
@@ -1214,186 +1214,6 @@ box-thumbnail:hover{
     z-index: 1
 }
 
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact>div a>p:after {
-        top: 10px;
-    }
-}
-
-.section-contact-wrap .section-contact-in1 .section-contact>div a>p>span {
-    position: absolute;
-    font-size: 19px;
-    color: #fff;
-    z-index: 2;
-    line-height: 0.75;
-    left: 50%;
-    text-align: center;
-    width:70px;
-}
-
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact>div a>p>span {
-        font-size: 24px
-    }
-}
-
-.section-contact-wrap .section-contact-in1 .section-contact>div a>p>span>span {
-    font-size: 20px
-}
-
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact>div a>p>span>span {
-        font-size: 14px
-    }
-}
-
-.section-contact-wrap .section-contact-in1 .section-contact .callCenter {
-    background-color: #d6bf64;
-    text-align: center
-}
-
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact .callCenter img {
-        height: 110px
-    }
-}
-
-.section-contact-wrap .section-contact-in1 .section-contact .helpAndSupport {
-    background-image: url("../img/bg-helpAndSupport.png");
-    background-position: top center;
-    background-repeat: no-repeat
-}
-
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact .helpAndSupport {
-        background-size: auto 110px
-    }
-}
-
-.section-contact-wrap .section-contact-in1 .section-contact .helpAndSupport a>p>span {
-    margin-left: 42px;
-    top: 50px;
-    line-height: 20px;
-	font-size:13px;
-}
-
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact .helpAndSupport a>p>span {
-        top: 31px;
-        margin-left: 56px
-    }
-}
-
-.section-contact-wrap .section-contact-in1 .section-contact .branch {
-    background-image: url("../img/bg-branch.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    border-left: 1px #dedede solid
-}
-
-@media screen and (max-width: 1199px) {
-    .section-contact-wrap .section-contact-in1 .section-contact .branch {
-        border-left: none
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact .branch {
-        background-size: auto 110px;
-        border-bottom: 1px #dedede solid
-    }
-}
-
-.section-contact-wrap .section-contact-in1 .section-contact .branch a>p:after {
-    background-image: url("../img/bg-balloon02.png")
-}
-
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact .branch a>p:after {
-        top: 10px;
-    }
-}
-
-.section-contact-wrap .section-contact-in1 .section-contact .branch a>p>span {
-    margin-left: 45px;
-    top: 48px;
-    line-height: 24px;
-}
-
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact .branch a>p>span {
-        top: 40px;
-        margin-left: 47px
-    }
-}
-
-.section-contact-wrap .section-contact-in1 .section-contact .contactUs {
-    background-image: url("../img/bg-contactUs.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    border-left: 1px #dedede solid
-}
-
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact .contactUs {
-        background-size: auto 110px;
-        border-left: none
-    }
-}
-
-.section-contact-wrap .section-contact-in1 .section-contact .contactUs a>p>span {
-    line-height: 22px;
-    margin-left: 28px;
-    top: 53px;
-    width: 97px;
-    text-align: center;
-}
-
-@media screen and (max-width: 767px) {
-    .section-contact-wrap .section-contact-in1 .section-contact .contactUs a>p>span {
-        top: 45px;
-        margin-left: 44px
-    }
-}
-
-.section-contact-wrap .section-contact-in2 {
-    background-image: url("../img/bg-contact.png"), url("../img/bg-contact-repeat.png");
-    background-position: top left, center;
-    background-repeat: no-repeat, repeat-x;
-    background-color: #542a6b;
-    min-height: 338px;
-    padding: 40px 0 0
-}
-
-@media screen and (max-width: 991px) {
-    .section-contact-wrap .section-contact-in2 {
-        background-size: cover;
-        height: auto;
-        padding-bottom: 20px
-    }
-}
-
-
-
-@media screen and (max-width: 991px) {
-   
-}
-
-
-
-
-
-@media screen and (min-width: 1200px) {
-   
-}
-
-@media screen and (max-width: 991px) {
-  
-}
-
-
-
-
 
 
 .headerWrap {
@@ -1546,7 +1366,7 @@ box-thumbnail:hover{
     -ms-transition: 0.3s all ease-in-out;
     -o-transition: 0.3s all ease-in-out;
     transition: 0.3s all ease-in-out;
-    
+
 }
 .headerNavigation_lg  li.switchLanguage .btn:hover {  
     color: #fff;
@@ -1589,7 +1409,7 @@ box-thumbnail:hover{
     position: relative;
     padding-left:20px;
     padding-right:20px;
-        
+
 }
 
 
@@ -1622,20 +1442,20 @@ box-thumbnail:hover{
 }
 
 @media screen and (max-width: 767px) {
-    
+
 }
 
 
 
 @media screen and (max-width: 767px) {
-    
+
 }
 
 
 
 
 @media screen and (max-width: 767px) {
-   
+
 }
 
 
@@ -3464,7 +3284,7 @@ box-thumbnail:hover{
 
 
 .dropbtn {
-   background:none;
+    background:none;
     color: white;
     padding: 16px;
     font-size: 18px;
@@ -3499,23 +3319,78 @@ box-thumbnail:hover{
 }
 
 .dropdown:hover .dropbtn {
-  /*  background-color: #3e8e41;*/
+    /*  background-color: #3e8e41;*/
 }
-
 .slider{
     float: left;
-   margin-left: 55px;  
+    margin-left: 0px;  
 }
 .slider img {
+    padding: 50px;
     width: 948px;
+
+}
+.ceo-box{
+    float: left;
+    margin-left: 40px;
+    text-align: center;
+}
+/* screen 1024 */
+@media screen and (max-width: 1024px) {
+    .headerBrand {
+        float: left;
+        width: 100px;
+        height: 80px;
+        position: relative;
+        padding: 5px 0
+    }
+    .headerBrand img {
+        width: 50px;
+        margin: 5px;
+    }
+
+    .headerBrand .headerBrandText {
+        position: absolute;
+        top: 10px;
+        left: 60px;
+    }
+
+    .headerBrand .headerBrandText .headerBrandTextInner {
+        font-size: 30px;
+        color: #7b41b3;
+        line-height: 0.8;
+        letter-spacing: -1px;
+        white-space: nowrap;
+        padding-bottom:7px;
+    }
+
+    .headerBrand .headerBrandText .headerBrandTextInner+.headerBrandTextInner {
+        font-size: 14px;
+        color: #8b8096
+    } 
+
+    .afterHeader {
+        position: relative;
+        padding-left:0px;
+        padding-right:0px;
+
+    }
+    .slider img {
+        padding: 0px;
+        width:738px;
+
+    }
+    .ceo-box{
+        margin-left: 38px;
+        text-align: center;
+        font-size:0.7em;
+    }
+    .ceo-box img{
+        width:200px;
+    }
+    .highlightSlider {
+  position: relative;
   
 }
-
-.ceo-box{
-  float: left;
-  margin-left: 10px;
-text-align: center;
 }
-.ceo-box img{
-    
-}
+/* end screen 1024 */

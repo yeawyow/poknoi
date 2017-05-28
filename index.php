@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+include_once 'lib/config.inc.php';
+$Db = new MySqlConn;
+?>
 <!DOCTYPE html>
 <html lang="th">
     <head>
@@ -34,7 +38,9 @@
 
         <link rel="stylesheet" type="text/css" href="theme/css/index.css">
         <link rel="stylesheet" href="theme/css/responsive.css">
-
+<style>
+.mySlides {display:none;}
+</style>
     </head>
 
     <body class=" open-gray">
@@ -68,6 +74,7 @@
                     </div>  
                 </div>
             </div>
+            
             <div class="mainNav">
                 <div class="afterHeader">
                     <div class="dropdown">
@@ -101,6 +108,10 @@
                 </div>
             </div>
         </header><!-- /header -->
+        
+
+
+
         <div class="containner">
                <?php
 // Application 
