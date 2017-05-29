@@ -33,18 +33,84 @@
 
     </div> 
 </div>
+<div class="container">
+  <h2>Dynamic Tabs</h2>
+  <ul class="tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+  </ul>
 
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>HOME</h3>
+      <div id="tab1" class="tab_content active">
+            <div id="slick_news" class="highlight_slick_news slick_news">
+
+                <div class="htmlcontent" data-index="0">
+                    <ul>
+                           <?php
+                    $sql = $Db->query('SELECT *  FROM announce  order by id desc limit 4', '');
+                    foreach ($sql as $row) {
+                        ?>
+                        <li class="col-sm-4 boxdata" title="<?php echo $row['topic']; ?>">
+                            <a class="imagefill _blank"><img src="img/slider/<?php echo $row['image']?>" alt="<?php echo $row['topic']; ?>"></a>
+                            <a class="txtautosize linksubject _blank" href="?app=main&p=announce_content&id=<?php echo $row['id'] ?>&topic=<?php echo $row['topic'] ?>"><?php echo $row['content2'];?>...</a>
+                            <p class="countshare"><span class="fa fa-eye"></span> 80  ครั้ง</p>
+                            <a class="linkreadmore _blank" href="?m=main&p=announce_content&id=<?php echo $row['id'] ?>&topic=<?php echo $row['topic'] ?>">อ่านต่อ</a>
+                        </li>
+                       <?PHP } ?>
+
+                    </ul>
+                </div>
+            </div>
+            <p class="clearfix text-right"><a class="btn btn-primary _blank" href="">ดูทั้งหมด <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+        </div>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+       <div id="slick_news" class="highlight_slick_news slick_news">
+
+                <div class="htmlcontent" data-index="0">
+                    <ul>
+                           <?php
+                    $sql = $Db->query('SELECT * FROM procurement ORDER BY procur_id DESC limit 6  ', '');
+                    foreach ($sql as $row) {
+                        ?>
+                        <li class="col-sm-4 boxdata" title="<?php echo $row['topic']; ?>">
+                            <a class="imagefill _blank"><img src="img/slider/<?php echo $row['image']?>" alt="<?php echo $row['topic']; ?>"></a>
+                            <a class="txtautosize linksubject _blank" href="?app=main&p=announce_content&id=<?php echo $row['id'] ?>&topic=<?php echo $row['topic'] ?>"><?php echo $row['content2'];?>...</a>
+                            <p class="countshare"><span class="fa fa-eye"></span> 80  ครั้ง</p>
+                            <a class="linkreadmore _blank" href="?m=main&p=announce_content&id=<?php echo $row['id'] ?>&topic=<?php echo $row['topic'] ?>">อ่านต่อ</a>
+                        </li>
+                       <?PHP } ?>
+
+                    </ul>
+                </div>
+            </div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+</div>
 <h2></h2>
 <div class="container"> 
     <div class="clearfix"></div>
     <ul class="tabs">
-        <li class="active nocount" data-rel="tab1"><span>ข่าวประชาสัมพันธ์</span><div class="c">0</div></li>
-        <li data-rel="tab2" class="nocount"><span>ข่าวจัดซื้อจัดจ้าง</span><div class="c">0</div></li>
-        <li data-rel="tab3" class=""><span>ภาพข่าวและกิจกรรม</span><div class="c">1</div></li>
-        <li data-rel="tab4" class="nocount"><span>วิดีโอ</span><div class="c">0</div></li>
-        <li data-rel="tab6" class="nocount"><span>ประกาศรับสมัครงาน</span><div class="c">0</div></li>
+        <li class="active " data-rel="tab1"><span>ข่าวประชาสัมพันธ์</span></li>
+        <li data-rel="tab2"><span>ข่าวจัดซื้อจัดจ้าง</span></li>
+        <li data-rel="tab3"><span>ภาพข่าวและกิจกรรม</span></li>
+        <li data-rel="tab4"><span>วิดีโอ</span></li>
+        <li data-rel="tab6"><span>ประกาศรับสมัครงาน</span></li>
     </ul>
-    <div class="tab_container lazyItem" data-lazy-style="FromBottom">
+    <div class="tab_container lazyItem">
         <h3 class="d_active tab_drawer_heading" data-rel="tab1"><span>ข่าวประชาสัมพันธ์</span></h3>
         <div id="tab1" class="tab_content active">
             <div id="slick_news" class="highlight_slick_news slick_news">

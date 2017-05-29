@@ -67,7 +67,7 @@ $Db = new MySqlConn;
                                 <ul class="list-inline">
                                     <li><a class="txtautosize hover_unterline" href="index.php"><span class="fa fa-home"></span> หน้าแรก</a></li>
                                     <li><a class="txtautosize hover_unterline _blank" href=""><span class="fa fa-address-book"></span> รับเรื่องร้องเรียน</a></li>
-                                    <li id="menuLogin"><a class="txtautosize hover_unterline _blank" href="#"><span class="fa fa-sign-in"></span> เข้าสู่ระบบ</a></li>
+                                    <li ><a  class="txtautosize hover_unterline _blank"  href="#" ><span class="fa fa-sign-in"></span> เข้าสู่ระบบ</a></li>
 
                                 </ul>
                             </div>
@@ -172,26 +172,53 @@ $Db = new MySqlConn;
                         </div>
                     </div>
 
-                </div>
-
             </div>
+<div class="container">
+  <h2>Basic Modal Example</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
-            <script src="script/jquery/jquery-2.2.4.min.js"></script>
-            <script src="script/jquery.js"></script>
-            <script src="script/jquery-ui.js"></script>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+         
+                <script src="script/jquery/jquery-2.2.4.min.js"></script>
+            <!--<script src="script/jquery-ui.js"></script>-->
             <script src="bootstrap/js/bootstrap.min.js"></script>
             <script src="script/magnificPopup.js"></script>
             <script src="script/plugin.js"></script>
-            <script src="script/main.js"></script>
-            <script src="script/index.js"></script>
+           <!-- <script src="script/main.js"></script>-->
+           <!-- <script src="script/index.js"></script>-->
             <script src="script/slider/jquery.flexslider-min.js"></script>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function () { //slider
         $('.flexslider').flexslider({
             animation: 'fade',
             controlsContainer: '.flexslider'
         });
-    });
+    });//end slider
+  
+
 </script>
     </body>
 </html>
