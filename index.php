@@ -27,25 +27,19 @@ $Db = new MySqlConn;
         <meta name="revisit-after" CONTENT="1 days" >
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="theme/css/normalize.css">
+
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
-
-        <link rel="stylesheet" href="theme/css/styles.css">
-        <link rel="stylesheet" href="theme/css/slider.css">
         <link rel="stylesheet" href="theme/css/main.css">
 
-        <link rel="stylesheet" type="text/css" href="theme/css/index.css">
         <link rel="stylesheet" href="theme/css/responsive.css">
-        <link rel="stylesheet" href="script/slider/slider.css">
-<style>
-.mySlides {display:none;}
-</style>
+
     </head>
 
     <body class=" open-gray">
         <h1 style="display:none;">เทศบาลตำบลพอกน้อย</h1>
+
 
         <header id="header" class="">
             <div class="headerWrap">
@@ -75,7 +69,7 @@ $Db = new MySqlConn;
                     </div>  
                 </div>
             </div>
-            
+
             <div class="mainNav">
                 <div class="afterHeader">
                     <div class="dropdown">
@@ -84,8 +78,8 @@ $Db = new MySqlConn;
                             <a href="?m=main&p=history">ประวัติความเป็นมา</a>
                             <a href="?m=main&p=vision">วิสัยทัศน์ พันธกิจ</a>
                             <a href="?m=main&p=location">สภาพข้อมูลพื้นฐาน</a>
-                             <a href="?m=main&p=charac">อำนาจหน้าที่</a>
-                              <a href="?m=main&p=budget">งบประมาณ</a>
+                            <a href="?m=main&p=charac">อำนาจหน้าที่</a>
+                            <a href="?m=main&p=budget">งบประมาณ</a>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -109,116 +103,58 @@ $Db = new MySqlConn;
                 </div>
             </div>
         </header><!-- /header -->
-        
+
 
 
 
         <div class="containner">
-               <?php
+            <?php
 // Application 
-                $dir = (isset($_GET['m']) ? $_GET['m'] : 'main');
-                $file = (isset($_GET['p']) ? $_GET['p'] : 'dashboard1');
+            $dir = (isset($_GET['m']) ? $_GET['m'] : 'main');
+            $file = (isset($_GET['p']) ? $_GET['p'] : 'dashboard1');
 
-                if (file_exists('modules/' . $dir . '/' . $file . '.php')) {
-                    include 'modules/' . $dir . '/' . $file . '.php';
-                } else {
-                    echo '404,ไม่พบหน้าที่ท่านเรียก';
-                }
-                ?>
-            </div> <!-- /container -->
-            <div >
-                <div class="section-contact-wrap">
+            if (file_exists('modules/' . $dir . '/' . $file . '.php')) {
+                include 'modules/' . $dir . '/' . $file . '.php';
+            } else {
+                echo '404,ไม่พบหน้าที่ท่านเรียก';
+            }
+            ?>
+        </div> <!-- /container -->
 
-                    <div class="row">
-                        <div class="col-md-2">
-                            <img src="img/banner/gov-banner_1.jpg" alt="dlt">
-                        </div>
-                        <div class="col-md-2">
-                            <img src="img/banner/gov-banner_2.jpg" alt="dlt">
-                        </div>
-                        <div class="col-md-2">
-                            <img src="img/banner/gov-banner_3.jpg" alt="dlt">
-                        </div>
-                        <div class="col-md-2">
-                            <img src="img/banner/gov-banner_4.jpg" alt="dlt">
-                        </div>
-                        <div class="col-md-3">
-                            <img src="img/banner/gov-banner_5.jpg" alt="dlt">
+
+        <!--  <div class="section-contact-in2">
+              <div class="container">
+                  <div class="row">
+
+                  </div>
+              </div>
+          </div>-->
+        <div class="footerWrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logoFooter">
+                            <p class="logo"><a href=""><img src="img/logo.jpg" alt="เทศบาลตำบลพอกน้อย"></a></p>
+                            <p class="text"><a href="15">เทศบาลตำบลพอกน้อย<span>อำเภอพรรณานิคม จังหวัดสกลนคร</span></a></p>
                         </div>
                     </div>
+                    <div class="col-sm-8 copyright">
 
-                  <!--  <div class="section-contact-in2">
-                        <div class="container">
-                            <div class="row">
-
-                            </div>
-                        </div>
-                    </div>-->
-                    <div class="footerWrap">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="logoFooter">
-                                        <p class="logo"><a href=""><img src="img/logo.jpg" alt="เทศบาลตำบลพอกน้อย"></a></p>
-                                        <p class="text"><a href="15">เทศบาลตำบลพอกน้อย<span>อำเภอพรรณานิคม จังหวัดสกลนคร</span></a></p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 copyright">
-
-                                    แสดงผลได้ดีใน <a class="_blank" style="color:red" href="https://www.mozilla.org/th/firefox/new/?gclid=CjwKEAjww_a8BRDB-O-OqZb_vRASJAA9yrc5tHYaVq1RnmMknAHY9hIRefb1Dnpk4HlkB5I8mRAj6xoCl3jw_wcB" target="_blank">Firefox</a>, <a style="color:#d6c000" class="_blank" href="https://www.google.com/intl/th/chrome/browser/" target="_blank">Chrome</a> และ  <span>Internet Explorer 9</span> ขึ้นไป | <span class="txtautosize">ลิขสิทธิ์ 2559 : กรมการขนส่งทางบก</span>
-                                    <div class="text-right"></div>
-                                </div>
-                            </div>
-                        </div>
+                        แสดงผลได้ดีใน <a class="_blank" style="color:red" href="https://www.mozilla.org/th/firefox/new/?gclid=CjwKEAjww_a8BRDB-O-OqZb_vRASJAA9yrc5tHYaVq1RnmMknAHY9hIRefb1Dnpk4HlkB5I8mRAj6xoCl3jw_wcB" target="_blank">Firefox</a>, <a style="color:#d6c000" class="_blank" href="https://www.google.com/intl/th/chrome/browser/" target="_blank">Chrome</a> และ  <span>Internet Explorer 9</span> ขึ้นไป | <span class="txtautosize">ลิขสิทธิ์ 2559 : กรมการขนส่งทางบก</span>
+                        <div class="text-right"></div>
                     </div>
-
+                </div>
             </div>
-<div class="container">
-  <h2>Basic Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+        </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
     </div>
-  </div>
-  
-</div>
 
-         
-                <script src="script/jquery/jquery-2.2.4.min.js"></script>
-            <!--<script src="script/jquery-ui.js"></script>-->
-            <script src="bootstrap/js/bootstrap.min.js"></script>
-            <script src="script/magnificPopup.js"></script>
-            <script src="script/plugin.js"></script>
-           <!-- <script src="script/main.js"></script>-->
-           <!-- <script src="script/index.js"></script>-->
-            <script src="script/slider/jquery.flexslider-min.js"></script>
-<script>
-    $(document).ready(function () { //slider
-        $('.flexslider').flexslider({
-            animation: 'fade',
-            controlsContainer: '.flexslider'
-        });
-    });//end slider
-  
+    <script src="script/jquery/jquery-2.2.4.min.js"></script>
 
-</script>
-    </body>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
 </html>
