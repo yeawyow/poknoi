@@ -30,14 +30,14 @@ $Db = new MySqlConn;
 
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-
+        <link rel="stylesheet" href="theme/css/style.css">
         <link rel="stylesheet" href="theme/css/main.css">
-
+        <link rel="stylesheet" href="theme/css/tab.css">
         <link rel="stylesheet" href="theme/css/responsive.css">
 
     </head>
 
-    <body class=" open-gray">
+    <body>
         <h1 style="display:none;">เทศบาลตำบลพอกน้อย</h1>
 
 
@@ -107,8 +107,7 @@ $Db = new MySqlConn;
 
 
 
-        <div class="containner">
-            <?php
+                   <?php
 // Application 
             $dir = (isset($_GET['m']) ? $_GET['m'] : 'main');
             $file = (isset($_GET['p']) ? $_GET['p'] : 'dashboard1');
@@ -119,8 +118,7 @@ $Db = new MySqlConn;
                 echo '404,ไม่พบหน้าที่ท่านเรียก';
             }
             ?>
-        </div> <!-- /container -->
-
+       
 
         <!--  <div class="section-contact-in2">
               <div class="container">
@@ -128,7 +126,7 @@ $Db = new MySqlConn;
 
                   </div>
               </div>
-          </div>-->
+          </div>
         <div class="footerWrap">
             <div class="container">
                 <div class="row">
@@ -147,14 +145,15 @@ $Db = new MySqlConn;
             </div>
         </div>
 
-    </div>
+    </div>-->
 
-    <script src="script/jquery/jquery-2.2.4.min.js"></script>
+    <script src="script/jquery/jquery-3.2.1.min.js"></script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript"> 
 
-
-
+$('.carousel').carousel();
+</script>
 
 </body>
 </html>
