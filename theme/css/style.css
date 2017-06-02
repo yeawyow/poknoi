@@ -62,8 +62,32 @@
 
 .news{
     margin-right: 5px;
+     border-bottom: solid 3px #902b2b;
 }
 .news img {
-   
     width: 100%;
+}
+ 
+.news a{
+    color:#05a;
+}
+.detail{
+   height: 107px;
+   font-size: 14px;
+   margin-top: 5px;
+}
+.read-more{
+    float:right;
+   background-color: #008CBA;  
+    border: none;
+    color: white;
+    padding: 12px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.ceo-box{
+    text-align: center;
 }

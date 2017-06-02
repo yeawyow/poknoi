@@ -46,7 +46,7 @@ $Db = new MySqlConn;
                 <div class="container-fluid">
                     <div class="header clearfix">
                         <div class="headerBrand">
-                            <a href="">
+                            <a href="index.php">
                                 <div class="headerBrandImage"><img src="img/logo.jpg" alt="เทศบาลตำบลพอกน้อย"></div>
                                 <div class="headerBrandText">
                                     <div class="headerBrandTextInner">เทศบาลตำบลพอกน้อย</div>

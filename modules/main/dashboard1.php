@@ -16,17 +16,31 @@
   <h1>This is Awesome</h1>
 </div>-->
 
-<div class="container">
-    <div class="row">
+<div class="container-fluid history">
+    <div class="container">
+        <div class="col-md-9">
         <h2>ประวัติความเป็นมา : <span style="color:#00733e" >เทศบาลตำบลพอกน้อย</span></h2>
         เทศบาลตำบลพอกน้อย เป็นองค์กรปกครองส่วนท้องถิ่นรูปแบบหนึ่ง เปลี่ยนแปลงจากสภาตำบล เป็นองค์การบริหารส่วนตำบลพอกน้อย เมื่อวันที่ 23 กุมภาพันธ์ 2540 ตามประกาศกระทรวงมหาดไทยลงวันที่ 16 ธันวาคม 2539 และยกฐานะเป็นเทศบาลตำบลเมื่อวันที่ 12 ตุลาคม 2552 ตามประกาศกระทรวงมหาดไทยลงวันที่ 12 ตุลาคม 2552 มีสำนักงานตั้งอยู่ที่บ้านพอกน้อยพัฒนา หมู่ที่ 8 ตำบลพอกน้อย อำเภอพรรณานิคม จังหวัดสกลนคร 
         ปัจจุบันเทศบาลตำบลพอกน้อย ตั้งอยู่ที่ ถ.นิตโย ต.พอกน้อย อ.พรรณานิคม จ.สกลนคร โดยห่างจากตัวจังหวัดสกลนครไปทางทิศตะวันตก ประมาณ 25 ก.ม
+          <h2>วิสัยทัศน์: <span style="color:#00733e" >เทศบาลตำบลพอกน้อย</span></h2>
+          วิสัยทัศน์ (Vision)
+          “พอกน้อยน่าอยู่ มุ่งสู่นวัตกรรม นำเศรษฐกิจพอเพียง รองรับ AEC ประชาชนมีส่วนร่วม”<br>
+      
+    </div>
+        <div class="col-md-3">
+             <div class="ceo-box" >
+                <img src="img/ceo.jpg">
+                <br>
+                <label>นายประจักษ์ ทองวงษา</label>
+                <br>
+                <label>นายกเทศมนตรีเทศบาลตำบลพอกน้อย</label>
+            </div>
+        </div>
     </div>
 </div>
-<h2></h2>
 <div class="container">
     <div class="row">
-        <h2>ข่าวประชาสัมพันธ์และข่าวกิจกรรม</h2>
+        <h2>ข่าวประชาสัมพันธ์และข่าวกิจกรรม :</h2>
 
         <?php
         $sql = $Db->query('SELECT *  FROM announce  order by id desc limit 4', '');
@@ -35,27 +49,34 @@
 
             <div class="col-md-3">
                 <div class="news">
-                    <a class="gallery-sec fancybox"   href="?app=main&p=announce_content&id=<?php echo $row['id'] ?>&topic=<?php echo $row['topic'] ?>">		
+                    <a href="?m=main&p=announce_content&id=<?php echo $row['id'] ?>&topic=<?php echo $row['topic'] ?>">
                         <div class="image-hover img-layer-slide-left-right">
                             <img src="img/announce/<?php echo $row['image'] ?>" alt="<?php echo $row['topic']; ?>">
                         </div>
 
-                        <div class="detail" style="height:107px; font-weight:lighter; color:#1F1F1F;"  >
-                            <p style="font-size:14px;">
+                        <div class="detail">
+                            <p>
                                 <?php echo $row['topic']; ?></p>
                         </div>
-                    </a>
+                    </a>  
                 </div>
             </div>
-
         <?php } ?>
     </div>
-    <div class="col-12 detail" align="right" style="margin-bottom:5px;"><a href="allpurchase.php"  >รายการทั้งหมด </a> </div> 
+    <a href=""><div class="col-12 read-more " style="margin-bottom:5px;">รายการทั้งหมด</div> </a>
+</div>
+<div class="container">
+    <div class="row">
+        <h2>รูปภาพกิจกรรม : เทศบาลตำบลพอกน้อย </h2>
+        
+       
+    </div>
+     <a href=""><div class="col-12 read-more " style="margin-bottom:5px;">รายการทั้งหมด</div> </a>
 </div>
 <h2></h2>
 <div class="container">
     <div class="row">
-
+        <h2>ข่าวประกวดราคา :</h2>
         <!-- Nav tabs --><div class="card">
             <ul class="nav nav-tabs" role="tablist">
 
@@ -84,7 +105,7 @@
                                             <H3><div style="color:#F00">
                                                     <i class="fa fa-file-pdf-o" aria-hidden="true"></i> </div>
                                             </H3>           </td>
-                                        <td width="47%" align="left" bgcolor='#EBF9FA'><a href="count.php?id=879" style=" color:#333"><?php echo $row['procur_title'] ?></a> 
+                                        <td width="47%" align="left" bgcolor='#EBF9FA'><?php echo $row['procur_title'] ?> 
                                         </td>
                                         <td width="20%"  align="center" bgcolor='#EBF9FA'><?php echo $row['procur_date'] ?></td>
                                         <td width="32px" align="center" bgcolor='#EBF9FA'><a href="count.php?id=879"><h4><i class="fa fa-cloud-download fa-2x" aria-hidden="true"></i></h4></a></td>
@@ -93,7 +114,7 @@
 
                                 <?php } ?>
                             </table>
-                            <div class="detail" align="right" style="margin-bottom:5px;"><a href="allpurchase.php"  >รายการทั้งหมด </a> </div>  
+                            <a href=""> <div class="read-more" style="margin-bottom:5px;">รายการทั้งหมด</div>  </a>
                         </div>	
 
 
@@ -106,7 +127,11 @@
 
 </div>
 
-
+<div class="container">
+    <div class="row">
+        <h2>รางวัลดีเด่น : เทศบาลตำบลพอกน้อย </h2>
+    </div>
+</div>
 
 
 
