@@ -119,13 +119,15 @@ public function update($tableName, $data)
             $this->_whereuser = $where;
         }
     }
-   public function num_rows_qurery($tableName) { //หาจำนวนแถวทั่วไป
+   public function num_rows_qurery($data,$tableName) { //หาจำนวนแถวทั่วไป
+       if(empty($data)){
         $this->_tableName = $tableName;
         $sql = 'SELECT * FROM';
         $query = $this->_mysql->query("$sql $this->_tableName $this->_where");
         $results = mysqli_num_rows($query);
-
+ 
         return $results;
+       }
     }
     public function num_rows($tableName) { //ใช้ตรวจสอบการ login
         $this->_tableName = $tableName;
@@ -216,3 +218,31 @@ function uppic_only($img,$imglocate,$limit_size=2000000,$limit_width=0,$limit_he
     }  
     return $file_up; // ส่งกลับชื่อไฟล์  
 }  
+
+function DateThai($strDate)
+
+{
+
+$strYear = date("Y",strtotime($strDate))+543;
+
+$strMonth= date("n",strtotime($strDate));
+
+$strDay= date("j",strtotime($strDate));
+
+$strHour= date("H",strtotime($strDate));
+
+$strMinute= date("i",strtotime($strDate));
+
+$strSeconds= date("s",strtotime($strDate));
+
+$strMonthCut = Array("","ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค.");
+
+$strMonthThai=$strMonthCut[$strMonth];
+
+return "$strDay $strMonthThai $strYear";
+
+}
+
+
+
+

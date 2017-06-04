@@ -107,8 +107,8 @@
                                             </H3>           </td>
                                         <td width="47%" align="left" bgcolor='#EBF9FA'><?php echo $row['procur_title'] ?> 
                                         </td>
-                                        <td width="20%"  align="center" bgcolor='#EBF9FA'><?php echo $row['procur_date'] ?></td>
-                                        <td width="32px" align="center" bgcolor='#EBF9FA'><a href="count.php?id=879"><h4><i class="fa fa-cloud-download fa-2x" aria-hidden="true"></i></h4></a></td>
+                                        <td width="20%"  align="center" bgcolor='#EBF9FA'><?php echo DateThai($row['procur_date'])  ?></td>
+                                        <td width="32px" align="center" bgcolor='#EBF9FA'><a href="modules/upload/pdf/<?php echo $row['procur_pdf'] ?>" target="_blank"><h4><i class="fa fa-cloud-download fa-2x" aria-hidden="true"></i></h4></a></td>
 
                                     </tr>
 

@@ -126,7 +126,7 @@ $Db = new MySqlConn;
 
                   </div>
               </div>
-          </div>
+          </div>-->
         <div class="footerWrap">
             <div class="container">
                 <div class="row">
@@ -138,14 +138,14 @@ $Db = new MySqlConn;
                     </div>
                     <div class="col-sm-8 copyright">
 
-                        แสดงผลได้ดีใน <a class="_blank" style="color:red" href="https://www.mozilla.org/th/firefox/new/?gclid=CjwKEAjww_a8BRDB-O-OqZb_vRASJAA9yrc5tHYaVq1RnmMknAHY9hIRefb1Dnpk4HlkB5I8mRAj6xoCl3jw_wcB" target="_blank">Firefox</a>, <a style="color:#d6c000" class="_blank" href="https://www.google.com/intl/th/chrome/browser/" target="_blank">Chrome</a> และ  <span>Internet Explorer 9</span> ขึ้นไป | <span class="txtautosize">ลิขสิทธิ์ 2559 : กรมการขนส่งทางบก</span>
+                        แสดงผลได้ดีใน <a class="_blank" style="color:red" href="https://www.mozilla.org/th/firefox/new/?gclid=CjwKEAjww_a8BRDB-O-OqZb_vRASJAA9yrc5tHYaVq1RnmMknAHY9hIRefb1Dnpk4HlkB5I8mRAj6xoCl3jw_wcB" target="_blank">Firefox</a>, <a style="color:#d6c000" class="_blank" href="https://www.google.com/intl/th/chrome/browser/" target="_blank">Chrome</a> และ  <span>Internet Explorer 9</span> ขึ้นไป | <span class="txtautosize"></span>
                         <div class="text-right"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-    </div>-->
+    
 
     <script src="script/jquery/jquery-3.2.1.min.js"></script>
 
