@@ -85,9 +85,14 @@ $Db = new MySqlConn;
                     <div class="dropdown">
                         <button class="dropbtn">หน่วยงานภายใน</button>
                         <div class="dropdown-content">
-                            <a href="#">คณะผู้บริหาร</a>
+                            <a href="#" data-toggle="modal" data-target="#myModal">คณะผู้บริหาร</a>
+                            <a href="#" data-toggle="modal" data-target="#sumnugpalud">สำนักปลัดเทศบาล</a>
+                            <a href="#" data-toggle="modal" data-target="#gongklung">กองคลัง</a>
+                            <a href="#" data-toggle="modal" data-target="#gongchang">กองช่าง</a>
+                            <a href="#" data-toggle="modal" data-target="#myModal">กองสาธารณสุขและสิ่งแวดล้อม</a>
+                            <a href="#" data-toggle="modal" data-target="#myModal">กองการศึกษาศาสนาและวัฒนธรรม</a>
                             <a href="#">สมาชิกสภาเทศบาล</a>
-                            <a href="#">หัวหน้าส่วนราชการ</a>
+
                         </div>
                     </div>
                     <div class="dropdown">
@@ -107,18 +112,18 @@ $Db = new MySqlConn;
 
 
 
-                   <?php
+        <?php
 // Application 
-            $dir = (isset($_GET['m']) ? $_GET['m'] : 'main');
-            $file = (isset($_GET['p']) ? $_GET['p'] : 'dashboard1');
+        $dir = (isset($_GET['m']) ? $_GET['m'] : 'main');
+        $file = (isset($_GET['p']) ? $_GET['p'] : 'dashboard1');
 
-            if (file_exists('modules/' . $dir . '/' . $file . '.php')) {
-                include 'modules/' . $dir . '/' . $file . '.php';
-            } else {
-                echo '404,ไม่พบหน้าที่ท่านเรียก';
-            }
-            ?>
-       
+        if (file_exists('modules/' . $dir . '/' . $file . '.php')) {
+            include 'modules/' . $dir . '/' . $file . '.php';
+        } else {
+            echo '404,ไม่พบหน้าที่ท่านเรียก';
+        }
+        ?>
+
 
         <!--  <div class="section-contact-in2">
               <div class="container">
@@ -145,15 +150,15 @@ $Db = new MySqlConn;
             </div>
         </div>
 
-    
+        <?php include_once 'modal.php'; ?>
 
-    <script src="script/jquery/jquery-3.2.1.min.js"></script>
+        <script src="script/jquery/jquery-3.2.1.min.js"></script>
 
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript"> 
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
 
-$('.carousel').carousel();
-</script>
+            $('.carousel').carousel();
+        </script>
 
-</body>
+    </body>
 </html>

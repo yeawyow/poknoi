@@ -4,8 +4,8 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-        <img class="item active" src="img/slider/1475992804.jpg">
-        <img class="item" src="img/slider/1478096033.jpg">
+        <img class="item active" src="img/slider/2.jpg">
+        <img class="item" src="img/slider/1.jpg">
 
     </div>
 </div>
