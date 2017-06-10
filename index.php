@@ -88,7 +88,7 @@ $Db = new MySqlConn;
                             <a href="#" data-toggle="modal" data-target="#myModal">คณะผู้บริหาร</a>
                             <a href="#" data-toggle="modal" data-target="#sumnugpalud">สำนักปลัดเทศบาล</a>
                             <a href="#" data-toggle="modal" data-target="#gongklung">กองคลัง</a>
-                            <a href="#" data-toggle="modal" data-target="#gongchang">กองช่าง</a>
+                            <a href="#" data-toggle="modal" data-target="#gongchang">กองช่างำ</a>
                             <a href="#" data-toggle="modal" data-target="#myModal">กองสาธารณสุขและสิ่งแวดล้อม</a>
                             <a href="#" data-toggle="modal" data-target="#myModal">กองการศึกษาศาสนาและวัฒนธรรม</a>
                             <a href="#">สมาชิกสภาเทศบาล</a>
