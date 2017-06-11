@@ -13,13 +13,13 @@ $Db = new MySqlConn;
         <meta property="og:title" content="เทศบาลตำบลพอกน้อย" >
         <meta property="og:site_name" content="เทศบาลตำบลพอกน้อย">
         <meta property="og:description" content="เทศบาลตำบลพอกน้อย" >
-        <meta property="og:image" content="เทศบาลตำบลพอกน้อย" >
+        <link href="img/เทศบาลตำบลพอกน้อย.ico" rel="shortcut icon" type="image/x-icon" />
 
         <meta property="og:type" content="article" >
 
         <link rel="manifest" href="เทศบาลตำบลพอกน้อย">
         <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="">
+      
         <meta name="theme-color" content="#ffffff">
 
         <meta name="robots" CONTENT="index, follow" >
@@ -86,12 +86,14 @@ $Db = new MySqlConn;
                         <button class="dropbtn">หน่วยงานภายใน</button>
                         <div class="dropdown-content">
                             <a href="#" data-toggle="modal" data-target="#myModal">คณะผู้บริหาร</a>
+                             <a href="#" data-toggle="modal" data-target="#sapa">สมาชิกสภาเทศบาล</a>
+                              <a href="#" data-toggle="modal" data-target="#rat">ส่วนราชการ</a>
                             <a href="#" data-toggle="modal" data-target="#sumnugpalud">สำนักปลัดเทศบาล</a>
                             <a href="#" data-toggle="modal" data-target="#gongklung">กองคลัง</a>
-                            <a href="#" data-toggle="modal" data-target="#gongchang">กองช่างำ</a>
-                            <a href="#" data-toggle="modal" data-target="#myModal">กองสาธารณสุขและสิ่งแวดล้อม</a>
-                            <a href="#" data-toggle="modal" data-target="#myModal">กองการศึกษาศาสนาและวัฒนธรรม</a>
-                            <a href="#">สมาชิกสภาเทศบาล</a>
+                            <a href="#" data-toggle="modal" data-target="#gongchang">กองช่าง</a>
+                            <a href="#" data-toggle="modal" data-target="#gongsasuk">กองสาธารณสุขและสิ่งแวดล้อม</a>
+                            <a href="#" data-toggle="modal" data-target="#gongkansuksa">กองการศึกษาศาสนาและวัฒนธรรม</a>
+                           
 
                         </div>
                     </div>
