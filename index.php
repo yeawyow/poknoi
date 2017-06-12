@@ -61,7 +61,7 @@ $Db = new MySqlConn;
                                 <ul class="list-inline">
                                     <li><a class="txtautosize hover_unterline" href="index.php"><span class="fa fa-home"></span> หน้าแรก</a></li>
                                     <li><a class="txtautosize hover_unterline _blank" href=""><span class="fa fa-address-book"></span> รับเรื่องร้องเรียน</a></li>
-                                    <li ><a  class="txtautosize hover_unterline _blank"  href="#" ><span class="fa fa-sign-in"></span> เข้าสู่ระบบ</a></li>
+                                    <li ><a  class="txtautosize hover_unterline _blank"  href="#" data-toggle="modal" data-target="#loginFrm" ><span class="fa fa-sign-in"></span> เข้าสู่ระบบ</a></li>
 
                                 </ul>
                             </div>
@@ -157,6 +157,7 @@ $Db = new MySqlConn;
         <script src="script/jquery/jquery-3.2.1.min.js"></script>
 
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="script/script.js"></scritp>
         <script type="text/javascript">
 
             $('.carousel').carousel();
