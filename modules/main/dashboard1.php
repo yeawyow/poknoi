@@ -66,12 +66,32 @@
     <a href=""><div class="col-12 read-more " style="margin-bottom:5px;">รายการทั้งหมด</div> </a>
 </div>
 <div class="container">
-    <div class="row">
-        <h2>รูปภาพกิจกรรม : เทศบาลตำบลพอกน้อย </h2>
-        
-       
+      <div class="row">
+        <h2>ข่าวประชาสัมพันธ์ :</h2>
+
+        <?php
+        $sql = $Db->query('SELECT *  FROM album  order by AlbumID desc limit 4', '');
+        foreach ($sql as $row) {
+            ?>
+
+            <div class="col-md-3">
+                <div class="news">
+                    <a href="?m=main&p=announce_content&id=<?php echo $row['AlbumID'] ?>&topic=<?php echo $row['AlbumName'] ?>">
+                        <div class="image-hover img-layer-slide-left-right">
+                            <img src="img/gallery/<?php echo $row['AlbumFolder'] ?>/<?php echo $row['AlbumShot'] ?>" alt="<?php echo $row['AlbumName']; ?>">
+                        </div>
+
+                        <div class="detail">
+                            <p>
+                                <?php echo $row['AlbumName']; ?></p>
+                        </div>
+                    </a>  
+                </div>
+            </div>
+        <?php } ?>
     </div>
-     <a href=""><div class="col-12 read-more " style="margin-bottom:5px;">รายการทั้งหมด</div> </a>
+    </div>
+    <a href=""><div class="col-12 read-more " style="margin-bottom:5px;">รายการทั้งหมด</div> </a>
 </div>
 <h2></h2>
 <div class="container">
