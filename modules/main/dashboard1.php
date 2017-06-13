@@ -19,16 +19,16 @@
 <div class="container-fluid history">
     <div class="container">
         <div class="col-md-9">
-        <h2>ประวัติความเป็นมา : <span style="color:#00733e" >เทศบาลตำบลพอกน้อย</span></h2>
-        เทศบาลตำบลพอกน้อย เป็นองค์กรปกครองส่วนท้องถิ่นรูปแบบหนึ่ง เปลี่ยนแปลงจากสภาตำบล เป็นองค์การบริหารส่วนตำบลพอกน้อย เมื่อวันที่ 23 กุมภาพันธ์ 2540 ตามประกาศกระทรวงมหาดไทยลงวันที่ 16 ธันวาคม 2539 และยกฐานะเป็นเทศบาลตำบลเมื่อวันที่ 12 ตุลาคม 2552 ตามประกาศกระทรวงมหาดไทยลงวันที่ 12 ตุลาคม 2552 มีสำนักงานตั้งอยู่ที่บ้านพอกน้อยพัฒนา หมู่ที่ 8 ตำบลพอกน้อย อำเภอพรรณานิคม จังหวัดสกลนคร 
-        ปัจจุบันเทศบาลตำบลพอกน้อย ตั้งอยู่ที่ ถ.นิตโย ต.พอกน้อย อ.พรรณานิคม จ.สกลนคร โดยห่างจากตัวจังหวัดสกลนครไปทางทิศตะวันตก ประมาณ 25 ก.ม
-          <h2>วิสัยทัศน์: <span style="color:#00733e" >เทศบาลตำบลพอกน้อย</span></h2>
-          วิสัยทัศน์ (Vision)
-          “พอกน้อยน่าอยู่ มุ่งสู่นวัตกรรม นำเศรษฐกิจพอเพียง รองรับ AEC ประชาชนมีส่วนร่วม”<br>
-      
-    </div>
+            <h2>ประวัติความเป็นมา : <span style="color:#00733e" >เทศบาลตำบลพอกน้อย</span></h2>
+            เทศบาลตำบลพอกน้อย เป็นองค์กรปกครองส่วนท้องถิ่นรูปแบบหนึ่ง เปลี่ยนแปลงจากสภาตำบล เป็นองค์การบริหารส่วนตำบลพอกน้อย เมื่อวันที่ 23 กุมภาพันธ์ 2540 ตามประกาศกระทรวงมหาดไทยลงวันที่ 16 ธันวาคม 2539 และยกฐานะเป็นเทศบาลตำบลเมื่อวันที่ 12 ตุลาคม 2552 ตามประกาศกระทรวงมหาดไทยลงวันที่ 12 ตุลาคม 2552 มีสำนักงานตั้งอยู่ที่บ้านพอกน้อยพัฒนา หมู่ที่ 8 ตำบลพอกน้อย อำเภอพรรณานิคม จังหวัดสกลนคร 
+            ปัจจุบันเทศบาลตำบลพอกน้อย ตั้งอยู่ที่ ถ.นิตโย ต.พอกน้อย อ.พรรณานิคม จ.สกลนคร โดยห่างจากตัวจังหวัดสกลนครไปทางทิศตะวันตก ประมาณ 25 ก.ม
+            <h2>วิสัยทัศน์: <span style="color:#00733e" >เทศบาลตำบลพอกน้อย</span></h2>
+            วิสัยทัศน์ (Vision)
+            “พอกน้อยน่าอยู่ มุ่งสู่นวัตกรรม นำเศรษฐกิจพอเพียง รองรับ AEC ประชาชนมีส่วนร่วม”<br>
+
+        </div>
         <div class="col-md-3">
-             <div class="ceo-box" >
+            <div class="ceo-box" >
                 <img src="img/ceo.jpg">
                 <br>
                 <label>นายประจักษ์ ทองวงษา</label>
@@ -40,7 +40,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <h2>ข่าวประชาสัมพันธ์และข่าวกิจกรรม :</h2>
+        <h2>ข่าวประชาสัมพันธ์:</h2>
 
         <?php
         $sql = $Db->query('SELECT *  FROM announce  order by id desc limit 4', '');
@@ -66,8 +66,8 @@
     <a href=""><div class="col-12 read-more " style="margin-bottom:5px;">รายการทั้งหมด</div> </a>
 </div>
 <div class="container">
-      <div class="row">
-        <h2>ข่าวประชาสัมพันธ์ :</h2>
+    <div class="row">
+        <h2>รูปภาพกิจกรรม:</h2>
 
         <?php
         $sql = $Db->query('SELECT *  FROM album  order by AlbumID desc limit 4', '');
@@ -75,13 +75,13 @@
             ?>
 
             <div class="col-md-3">
-                <div class="news">
-                    <a href="?m=main&p=announce_content&id=<?php echo $row['AlbumID'] ?>&topic=<?php echo $row['AlbumName'] ?>">
+                <div class="gallery">
+                    <a href="?m=gallery&p=gallery_content&id=<?php echo $row['AlbumID'] ?>&topic=<?php echo $row['AlbumName'] ?>&AlbumFolder=<?php echo $row['AlbumFolder']; ?>" target="bank">
                         <div class="image-hover img-layer-slide-left-right">
                             <img src="img/gallery/<?php echo $row['AlbumFolder'] ?>/<?php echo $row['AlbumShot'] ?>" alt="<?php echo $row['AlbumName']; ?>">
                         </div>
 
-                        <div class="detail">
+                        <div class="detail-gallery">
                             <p>
                                 <?php echo $row['AlbumName']; ?></p>
                         </div>
@@ -90,9 +90,10 @@
             </div>
         <?php } ?>
     </div>
-    </div>
     <a href=""><div class="col-12 read-more " style="margin-bottom:5px;">รายการทั้งหมด</div> </a>
 </div>
+
+
 <h2></h2>
 <div class="container">
     <div class="row">
@@ -127,7 +128,7 @@
                                             </H3>           </td>
                                         <td width="47%" align="left" bgcolor='#EBF9FA'><?php echo $row['procur_title'] ?> 
                                         </td>
-                                        <td width="20%"  align="center" bgcolor='#EBF9FA'><?php echo DateThai($row['procur_date'])  ?></td>
+                                        <td width="20%"  align="center" bgcolor='#EBF9FA'><?php echo DateThai($row['procur_date']) ?></td>
                                         <td width="32px" align="center" bgcolor='#EBF9FA'><a href="modules/upload/pdf/<?php echo $row['procur_pdf'] ?>" target="_blank"><h4><i class="fa fa-cloud-download fa-2x" aria-hidden="true"></i></h4></a></td>
 
                                     </tr>

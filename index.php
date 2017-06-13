@@ -34,6 +34,7 @@ $Db = new MySqlConn;
         <link rel="stylesheet" href="theme/css/main.css">
         <link rel="stylesheet" href="theme/css/tab.css">
         <link rel="stylesheet" href="theme/css/responsive.css">
+        <link rel="stylesheet" href="script/lightbox/ekko-lightbox.css">
 
     </head>
 
@@ -157,11 +158,13 @@ $Db = new MySqlConn;
         <script src="script/jquery/jquery-3.2.1.min.js"></script>
 
         <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="script/script.js"></scritp>
-        <script type="text/javascript">
-
-            $('.carousel').carousel();
-        </script>
+        
+        <script src="script/lightbox/ekko-lightbox.js"></script>
+        <script type="text/javascript">$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
+</script>
 
     </body>
 </html>
