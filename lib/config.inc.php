@@ -103,36 +103,12 @@ public function update($tableName, $data)
         }
         }
     }
-    public function where_data($data, $opera = '') {
-        if (!empty($data)) {
-            $keys = array_keys($data);
-            $where = "WHERE ";
-            for ($i = 0; $i < count($data); $i++) {
-                if (is_string($data[$keys[$i]])) {
-                    $where .= $keys[$i] . "='" . $data[$keys[$i]] . "'";
-                    if ($i != count($data) - 1) {
-                        $where .= " $opera ";
-                    }
-                }
-            }
-
-            $this->_whereuser = $where;
-        }
-    }
-   public function num_rows_qurery($data,$tableName) { //หาจำนวนแถวทั่วไป
-       if(empty($data)){
-        $this->_tableName = $tableName;
-        $sql = 'SELECT * FROM';
-        $query = $this->_mysql->query("$sql $this->_tableName $this->_where");
-        $results = mysqli_num_rows($query);
- 
-        return $results;
-       }
-    }
+   
+   
     public function num_rows($tableName) { //ใช้ตรวจสอบการ login
         $this->_tableName = $tableName;
         $sql = 'SELECT * FROM';
-        $query = $this->_mysql->query("$sql $this->_tableName $this->_whereuser");
+        $query = $this->_mysql->query("$sql $this->_tableName $this->_where");
         $results = mysqli_num_rows($query);
 
         return $results;

@@ -482,11 +482,11 @@
 
   
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="ชื่อผู้ใช้">
+          <input type="text" name="username" id="username" class="form-control" placeholder="ชื่อผู้ใช้">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="รหัสผ่าน">
+          <input type="password" name="password" id="password" class="form-control" placeholder="รหัสผ่าน">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">

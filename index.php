@@ -19,7 +19,7 @@ $Db = new MySqlConn;
 
         <link rel="manifest" href="เทศบาลตำบลพอกน้อย">
         <meta name="msapplication-TileColor" content="#ffffff">
-      
+
         <meta name="theme-color" content="#ffffff">
 
         <meta name="robots" CONTENT="index, follow" >
@@ -61,7 +61,7 @@ $Db = new MySqlConn;
                             <div class="headerNavigation_lg">
                                 <ul class="list-inline">
                                     <li><a class="txtautosize hover_unterline" href="index.php"><span class="fa fa-home"></span> หน้าแรก</a></li>
-                                    <li><a class="txtautosize hover_unterline _blank" href=""><span class="fa fa-address-book"></span> รับเรื่องร้องเรียน</a></li>
+                                    <li><a class="txtautosize hover_unterline _blank" href="http://rdserver.rd.go.th/publish/index.php?page=taxonline" target="blank"><span class="fa fa-address-book"></span> ยื่นภาษีออนไลน์</a></li>
                                     <li ><a  class="txtautosize hover_unterline _blank"  href="#" data-toggle="modal" data-target="#loginFrm" ><span class="fa fa-sign-in"></span> เข้าสู่ระบบ</a></li>
 
                                 </ul>
@@ -87,14 +87,14 @@ $Db = new MySqlConn;
                         <button class="dropbtn">หน่วยงานภายใน</button>
                         <div class="dropdown-content">
                             <a href="#" data-toggle="modal" data-target="#myModal">คณะผู้บริหาร</a>
-                             <a href="#" data-toggle="modal" data-target="#sapa">สมาชิกสภาเทศบาล</a>
-                              <a href="#" data-toggle="modal" data-target="#rat">ส่วนราชการ</a>
+                            <a href="#" data-toggle="modal" data-target="#sapa">สมาชิกสภาเทศบาล</a>
+                            <a href="#" data-toggle="modal" data-target="#rat">ส่วนราชการ</a>
                             <a href="#" data-toggle="modal" data-target="#sumnugpalud">สำนักปลัดเทศบาล</a>
                             <a href="#" data-toggle="modal" data-target="#gongklung">กองคลัง</a>
                             <a href="#" data-toggle="modal" data-target="#gongchang">กองช่าง</a>
                             <a href="#" data-toggle="modal" data-target="#gongsasuk">กองสาธารณสุขและสิ่งแวดล้อม</a>
                             <a href="#" data-toggle="modal" data-target="#gongkansuksa">กองการศึกษาศาสนาและวัฒนธรรม</a>
-                           
+
 
                         </div>
                     </div>
@@ -158,13 +158,14 @@ $Db = new MySqlConn;
         <script src="script/jquery/jquery-3.2.1.min.js"></script>
 
         <script src="bootstrap/js/bootstrap.min.js"></script>
-        
+        <script src="script/script.js"></script>
         <script src="script/lightbox/ekko-lightbox.js"></script>
-        <script type="text/javascript">$(document).on('click', '[data-toggle="lightbox"]', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-});
-</script>
+        <script type="text/javascript">
+            $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+        </script>
 
     </body>
 </html>
