@@ -13,17 +13,22 @@ class MySqlConn {
     protected $_where;
     protected $_order;
     protected $_limit;
+    protected $_and;
 
     public function __construct() {
         $this->_mysql = new mysqli(host, username, password, db)
                 or die('not connect to sql');
     }
 
-    public function where($prop, $value) {
+    public function where($prop, $value,$sql='') {
         if (!empty($prop) && !empty($value)) {
             $this->_where = "WHERE $prop = '$value'";
+        }else{
+            $sql=$sql;
+            $this->_where="WHERE $sql";
         }
     }
+   
 
     public function order($order, $sort) {
         if (!empty($order)) {
