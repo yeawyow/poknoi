@@ -20,6 +20,10 @@ $query=$Db->num_rows('user');
         }else{
              $data = array("login"=>"error");
         }
-        
+        $response = array(
+      
+        "data" => $data
+    );	
+                echo json_encode($response);   
 }
 ?>
