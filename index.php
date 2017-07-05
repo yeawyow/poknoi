@@ -62,8 +62,11 @@ $Db = new MySqlConn;
                                 <ul class="list-inline">
                                     <li><a class="txtautosize hover_unterline" href="index.php"><span class="fa fa-home"></span> หน้าแรก</a></li>
                                     <li><a class="txtautosize hover_unterline _blank" href="http://rdserver.rd.go.th/publish/index.php?page=taxonline" target="blank"><span class="fa fa-address-book"></span> ยื่นภาษีออนไลน์</a></li>
-                                    <li ><a  class="txtautosize hover_unterline _blank"  href="#" data-toggle="modal" data-target="#loginFrm" ><span class="fa fa-sign-in"></span> เข้าสู่ระบบ</a></li>
-
+                                    <li ><?php if(isset($_SESSION["status_login"])=="logined"){ ?>
+                                         <a  class="txtautosize hover_unterline _blank"  href="logout.php"  ><span class="fa fa-sign-in"></span>ออกจากระบบ</a></li>
+                                    <?php }else{ ?>
+                                        <a  class="txtautosize hover_unterline _blank"  href="#" data-toggle="modal" data-target="#loginFrm" ><span class="fa fa-sign-in"></span> เข้าสู่ระบบ</a></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </div>

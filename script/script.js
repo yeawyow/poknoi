@@ -5,7 +5,17 @@ $("#login").click(function () {
         data: {username:$("#username").val(),password:$("#password").val()},
         datatype:"json",
         success: function (data) {
-            console.log(data);
+    console.log(data);
+    
+         if(data==''){
+             alert("กรุณากรอกข้อมูล");
+         }else if(data=='error'){
+            
+             alert("user หรือ password ไม่ถูกต้อง")
+            
+         }else if('success'){
+           window.location = "admin/";
+         }
         }
     });
 });
