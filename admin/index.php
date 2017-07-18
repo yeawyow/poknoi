@@ -34,7 +34,7 @@ $Db = new MySqlConn;
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+  <script src="../script/jquery/jquery-3.2.1.min.js"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -289,7 +289,7 @@ $Db = new MySqlConn;
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="../" class="btn btn-default btn-flat">กลับหน้าเว็บ</a>
                 </div>
                 <div class="pull-right">
                   <a href="../logout.php" class="btn btn-default btn-flat">Sign out</a>
@@ -334,6 +334,18 @@ $Db = new MySqlConn;
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li><a href="index.php?file=procurement"><i class="fa fa-book"></i> <span>ข่าวประกวดราคา</span></a></li>
+            <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>ผู้ใช้งาน</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="?file=sys_user"><i class="fa fa-circle-o"></i>ผู้ใช้งาน</a></li>
+            <li><a href="index2.html"><i class="fa fa-circle-o"></i>ระดับผู้ใช้งาน</a></li>
+          </ul>
+        </li> 
         <li class="active treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -522,14 +534,7 @@ $Db = new MySqlConn;
             ?>
        
   </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.8
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="">Almsaeed Studio</a>.</strong> All rights
-    reserved.
-  </footer>
+ 
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

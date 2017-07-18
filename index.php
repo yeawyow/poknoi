@@ -36,6 +36,20 @@ $Db = new MySqlConn;
         <link rel="stylesheet" href="theme/css/responsive.css">
         <link rel="stylesheet" href="script/lightbox/ekko-lightbox.css">
 
+        
+        <script src="script/jquery/jquery-3.2.1.min.js"></script>
+
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="script/script.js"></script>
+        <script src="script/lightbox/ekko-lightbox.js"></script>
+        <script type="text/javascript">
+            $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+            
+        </script>
+
     </head>
 
     <body>
@@ -63,7 +77,8 @@ $Db = new MySqlConn;
                                     <li><a class="txtautosize hover_unterline" href="index.php"><span class="fa fa-home"></span> หน้าแรก</a></li>
                                     <li><a class="txtautosize hover_unterline _blank" href="http://rdserver.rd.go.th/publish/index.php?page=taxonline" target="blank"><span class="fa fa-address-book"></span> ยื่นภาษีออนไลน์</a></li>
                                     <li ><?php if(isset($_SESSION["status_login"])=="logined"){ ?>
-                                         <a  class="txtautosize hover_unterline _blank"  href="logout.php"  ><span class="fa fa-sign-in"></span>ออกจากระบบ</a></li>
+                                         <a  class="txtautosize hover_unterline _blank"  href="admin/"  ><span class="fa fa-sign-in"></span>ผู้ดูแลระบบ</a></li>
+                                    <li> <a  class="txtautosize hover_unterline _blank"  href="logout.php"  ><span class="fa fa-sign-in"></span>ออกจากระบบ</a></li>
                                     <?php }else{ ?>
                                         <a  class="txtautosize hover_unterline _blank"  href="#" data-toggle="modal" data-target="#loginFrm" ><span class="fa fa-sign-in"></span> เข้าสู่ระบบ</a></li>
                                     <?php } ?>
@@ -157,18 +172,6 @@ $Db = new MySqlConn;
         </div>
 
         <?php include_once 'modal.php'; ?>
-
-        <script src="script/jquery/jquery-3.2.1.min.js"></script>
-
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="script/script.js"></script>
-        <script src="script/lightbox/ekko-lightbox.js"></script>
-        <script type="text/javascript">
-            $(document).on('click', '[data-toggle="lightbox"]', function (event) {
-                event.preventDefault();
-                $(this).ekkoLightbox();
-            });
-        </script>
 
     </body>
 </html>

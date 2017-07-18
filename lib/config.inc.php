@@ -59,7 +59,7 @@ class MySqlConn {
         return $results;
     }
 
-    public function insert($tableName = '', $data) {
+    public function insert($tableName , $data) {
 
         if (!empty($data)) {
 
@@ -85,7 +85,9 @@ class MySqlConn {
             if ($sql) {
                 $this->_mysql->query($sql);
             }
+            
         }
+        
     }
 public function update($tableName, $data)
     {
