@@ -16,5 +16,5 @@ if(isset($_POST["action"])=="add"){
     );
     
   $result=$Db->insert('user',$data);
-  
+  echo $_POST['action2'];
 }

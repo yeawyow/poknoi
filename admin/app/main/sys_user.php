@@ -73,9 +73,9 @@
                                     ?>
 
                                     <option value="<?php echo $row['type_id']; ?>">
-    <?php echo $row['type_user']; ?>
+                                        <?php echo $row['type_user']; ?>
                                     </option>
-                                    <?php } ?>
+                                <?php } ?>
                             </select>
                         </div>
 
@@ -96,7 +96,7 @@
                     <h3 class="box-title">รายชื่อ USER</h3>
                 </div>
                 <div class="box-body">
-                    <table id="myTable" class="table table-bordered">
+                    <table id="example" class="table table-bordered">
 
                         <tr>
                             <th style="width: 10px">#</th>
@@ -104,12 +104,12 @@
                             <th>username</th>
                             <th>ระดับ</th>
                             <th style="width:50px"></th>
-                            
+
                             <th style="width: 50px"></th>
                         </tr>
 
-                        
-                        
+
+
                     </table>
                 </div>
                 <!-- /.box-body -->
@@ -227,47 +227,21 @@
                      */
                     ?>
                     <script type="text/javascript">
-                        $(document).ready(function getuser(){
+                 
+
+                           
                           
-                           $.ajax({
-                               type:"POST",
-                               url:"app/query/sys_user_show.php",
-                               data:'',
-                               success:function(data){
-                                   
-                                   var obj = jQuery.parseJSON(data);
-                                   if(obj != '')
-					{
-						  //$("#myTable tbody tr:not(:first-child)").remove();
-					var no=0;
-                                    
-						  $.each(obj, function(key, val) {
-                                                no++;    
-                                                   
-									var tr = "<tr>";
-                                                                        tr = tr + "<td>"+no+"</td>";
-									tr = tr + "<td>" + val["fullname"] + "</td>";
-									tr = tr + "<td>" + val["username"] + "</td>";
-									tr = tr + "<td><span class='"+ val["type_color"] +"'>" + val["type_user"] + "</span></td>";
-									
-									tr = tr + " <td><button class='btn btn-info' type='button' name='editbtn' id='editbtn'>แก้ไข</button></td>";
-									tr = tr + " <td><button class='btn btn-danger' type='button' name='delbtn' id='delbtn'>ลบ</button></td>";
-									tr = tr + "</tr>";
-									$('#myTable > tbody:last').append(tr);
-						  });
-					}
-                               }
-                           });
-                        }),
-                        $("#adduserbtn").click(function () {
-                            $.ajax({
-                                type: "POST",
-                                url: "app/query/sys_user_insert.php",
-                                data: $("#procurFrm").serialize(),
-                                success: function (data) {
-                                      $("#procurFrm")[0].reset(); // reset form 
-                                   
-                                }
+
+                            $("#adduserbtn").click(function () {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "app/query/sys_user_insert.php",
+                                    data: $("#procurFrm").serialize(),
+                                    success: function (data) {
+                                        $("#procurFrm")[0].reset(); // reset form 
+
+                                    }
+                                });
                             });
-                        });
+                        
                     </script>
