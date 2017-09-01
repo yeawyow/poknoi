@@ -22,7 +22,7 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form"  id="procurFrm" name="procurFrm" method="POST">
+                <form role="form"  id="UserFrm" name="procurFrm" method="POST">
                     <div class="box-body">
 
                         <div class=" form-group col-md-4">
@@ -66,7 +66,7 @@
                         <div class="form-group col-md-2 ">
                             <label  for="lname">ระดับผู้ใช้งาน</label>
                             <select class="form-control" name="type_user" id="type_user">
-                                <option value="">--เลือกระดับผู้ใช้งาน--</option>
+                                <option  value="">--เลือกระดับผู้ใช้งาน--</option>
                                 <?php
                                 $result = $Db->query('', 'type_user');
                                 foreach ($result AS $row) {
@@ -84,7 +84,8 @@
                     <!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="button" name="adduserbtn" id="adduserbtn"  class="btn btn-primary">บันทึก</button>
+                        <button type="button" class="btn btn-warning hidden btn-edit" onClick="dataList.editData($('#form_user').serializeArray())" >Edit User</button>
+                        <button type="button"  class="btn btn-primary btn-add">Add User</button>
                     </div>
                 </form>
             </div>
@@ -108,20 +109,42 @@
                             <th style="width: 50px"></th>
                         </tr>
 
+                        <tbody class="show-list-data">
+                            <tr class="list-data">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button type="button" data-user-id=""
 
+                                            class="btn btn-sm btn-warning btn-update">Update</button>
+                                </td>
+                                <td>
+                                    <button data-user-id="" type="button" class="btn btn-sm btn-danger btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
 
                     </table>
                 </div>
                 <!-- /.box-body -->
-                <div class="box-footer clearfix">
-                    <ul class="pagination pagination-sm no-margin pull-right">
-                        <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">&raquo;</a></li>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="javascript:void(0);" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="javascript:void(0);"></a></li>
+                        <li>
+                            <a href="javascript:void(0);" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
                     </ul>
-                </div>
+                </nav>
+
             </div>
             <!-- /.box -->
             </section>
@@ -227,21 +250,178 @@
                      */
                     ?>
                     <script type="text/javascript">
-                 
 
-                           
-                          
+                        var dataList = {}
 
-                            $("#adduserbtn").click(function () {
-                                $.ajax({
-                                    type: "POST",
-                                    url: "app/query/sys_user_insert.php",
-                                    data: $("#procurFrm").serialize(),
-                                    success: function (data) {
-                                        $("#procurFrm")[0].reset(); // reset form 
-
+                        $(function () {
+                            dataList.getItem = function (chk_user_id) {
+                                return $.post("app/query/sys_user_Query.php", {
+                                    action: "item",
+                                    chk_user_id: chk_user_id
+                                }, function (response) {
+                                    if (response != null) {
+                                        return response;
+                                    }
+                                    return response;
+                                });
+                            }
+                            dataList.delItem = function (del_user_id) {
+                                if (confirm("Confirm delete this item?")) {
+                                    $.post("jsondata.php", {
+                                        action: "delete",
+                                        del_user_id: del_user_id
+                                    }, function (response) {
+                                        if (response != null) {
+                                            if (response[0].error != null || response[0].success != null) {
+                                                var statusText = (response[0].error != null) ? response[0].error : response[0].success;
+                                                alert(statusText);
+                                            }
+                                            if (response[0].success != null) {
+                                                var indexObj = $(".pagination").find("li.active").index();
+                                                var numDelete = $(".btn-delete").length;
+                                                if (indexObj > 1 && numDelete > 1) {
+                                                    dataList.getList(indexObj - 1, null);
+                                                } else {
+                                                    dataList.getList(0, true);
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                            dataList.editData = function (dataSend) {
+                                dataSend.push({
+                                    name: "action",
+                                    value: "edit"
+                                });
+                                $.post("jsondata.php", dataSend, function (response) {
+                                    console.log(response);
+                                    if (response != null) {
+                                        if (response[0].error != null || response[0].success != null) {
+                                            var statusText = (response[0].error != null) ? response[0].error : response[0].success;
+                                            $('#exampleModal').modal('toggle')
+//					alert(statusText);					
+                                        }
+                                        if (response[0].success != null) {
+                                            var indexObj = $(".pagination").find("li.active").index();
+                                            if (indexObj > 0) {
+                                                dataList.getList(indexObj - 1, null);
+                                            }
+                                        }
                                     }
                                 });
-                            });
-                        
+                            }
+                            dataList.addData = function () {
+
+
+                            }
+                            dataList.getList = function (s_page, show_page) {
+                                var haveData = null;
+                                $.post("app/query/sys_user_Query.php", {
+                                    action: 'list',
+                                    page: s_page
+                                }, function (response) {
+                                    if (response != null && response.data.length > 0) {
+                                        $(".pagination").removeClass("hidden");
+                                        $(".show-list-data").removeClass("hidden");
+                                        var rowData = $(".list-data").clone(true);
+                                        $(".show-list-data").html("");
+                                        var rowListData = "";
+                                        $.each(response.data, function (i, v) {
+                                            rowListData = "";
+                                            rowListData += "<tr class=\"list-data\">";
+                                            rowListData += $(rowData.find("td:eq(0)").text(response.data[i].item_id).end()
+                                                    .find("td:eq(1)").text(response.data[i].fullname).end()
+                                                    .find("td:eq(2)").text(response.data[i].username).end()
+                                                    .find("td:eq(3)").text(response.data[i].id_user).end()
+                                                    .find("td:eq(4) > button").attr("data-user-id", response.data[i].id_user).end()
+                                                    .find("td:eq(5) > button").attr("data-user-id", response.data[i].id_user).end()).html();
+                                            rowListData += "</tr>";
+                                            $(".show-list-data").append(rowListData);
+
+                                        }); // end loop				
+
+                                        $(".btn-delete").on("click", function () {
+                                            var del_user_id = $(this).data('user-id') // 
+                                            dataList.delItem(del_user_id);
+                                        });
+                                        $(".btn-update").on("click", function () {
+                                            
+                                            var chk_user_id = $(this).data('user-id')
+
+                                            if (chk_user_id != null) {
+                                                var usefrm = $('form#UserFrm');
+                                                
+                                                dataList.getItem(chk_user_id).done(function (res) {
+                                                   if(res != null && res.data.length > 0){
+                                                               
+					
+					console.log(res);
+					  usefrm.find("#fname").val(res.data[0].fname);
+                                          usefrm.find("#lname").val(res.data[0].lname);
+                                          usefrm.find('#type_user option[value='+res.data[0].type_user_id+']').attr('selected','selected');
+                                         usefrm.find(":selected").val(res.data[0].type_user_id);
+					usefrm.find(".btn-add").addClass("hidden");
+					usefrm.find(".btn-edit").removeClass("hidden");		  
+				} 
+                                                });
+                                            }
+                                        });
+                                        if (show_page == true) {
+                                            $(".pagination").find("li:first").unbind("click");
+                                            $(".pagination").find("li:last").unbind("click");
+                                            var rowPage = $('<li><a href="javascript:void(0);"></a></li>');
+                                            $(".pagination").find("li:not(:first):not(:last)").remove();
+                                            $(".pagination").find("li").removeClass("active");
+                                            var rowListPage = "";
+                                            for (i = 1; i <= response.allpage; i++) {
+                                                rowListPage += "<li>";
+                                                rowListPage += $(rowPage.find("a").text(i).end()
+                                                        .find("a").attr("href", "javascript:dataList.getList('" + (i - 1) + "',null)").end()).html();
+                                                rowListPage += "</li>";
+                                                if (i == response.allpage && rowListPage != "") {
+                                                    $(".pagination").find("li:eq(0)").after(rowListPage);
+                                                    $(".pagination").find("li:eq(1)").addClass("active");
+                                                    $(".pagination").find("li:not(':first'):not(':last')").on("click", function () {
+                                                        $(".pagination").find("li").removeClass("active");
+                                                        $(this).addClass("active");
+                                                    });
+                                                    $(".pagination").find("li:first").on("click", function () {
+                                                        var indexObj = $(".pagination").find("li.active").prev("li").index();
+                                                        if (indexObj > 0) {
+                                                            $(".pagination").find("li.active").prev("li").triggerHandler("click");
+                                                            dataList.getList(indexObj - 1, null);
+                                                        }
+                                                    });
+                                                    $(".pagination").find("li:last").on("click", function () {
+                                                        var indexObj = $(".pagination").find("li.active").next("li").index();
+                                                        if (indexObj <= response.allpage) {
+                                                            $(".pagination").find("li.active").next("li").triggerHandler("click");
+                                                            dataList.getList(indexObj - 1, null);
+                                                        }
+                                                    });
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                });
+                                if (haveData == null) {
+                                    $(".show-list-data").addClass("hidden");
+                                    $(".pagination").addClass("hidden");
+                                }
+                            }
+                            dataList.getList(0, true);
+
+
+
+
+                        });
+
+
+
+                        $("#adduserbtn").click(function () {
+
+                        });
+
                     </script>

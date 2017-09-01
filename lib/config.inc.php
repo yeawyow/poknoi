@@ -46,7 +46,7 @@ class MySqlConn {
         if (!empty($sql)) {
             $sql = $sql;
         } else {
-            $sql = 'SELECT * FROM';
+            $sql = 'SELECT * FROM ';
         }
         $this->_tableName = $tableName;
         $query = $this->_mysql->query('SET NAMES UTF8');
@@ -89,7 +89,7 @@ class MySqlConn {
         }
         
     }
-public function update($tableName, $data)
+public function update($tableName,$data)
     {
         if(!empty($data)){
         $keys = array_keys($data);
@@ -112,9 +112,14 @@ public function update($tableName, $data)
     }
    
    
-    public function num_rows($tableName) { //ใช้ตรวจสอบการ login
+    public function num_rows($sql,$tableName='') { 
+         if (!empty($sql)) {
+            $sql = $sql;
+        } else {
+            $sql = 'SELECT * FROM';
+        }
         $this->_tableName = $tableName;
-        $sql = 'SELECT * FROM';
+        
         $query = $this->_mysql->query("$sql $this->_tableName $this->_where");
         $results = mysqli_num_rows($query);
 

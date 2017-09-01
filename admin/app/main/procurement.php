@@ -21,7 +21,7 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form"  id="procurFrm" name="procurFrm" method="POST">
+                <form role="form"  id="uploadForm" name="uploadForm" method="POST" action="upload.php">
                     <div class="box-body">
                         <div class="form-group">
                             <label for="exampleInputEmail1">หัวข้อ</label>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputFile">เพิ่มไฟล์</label>
-                            <input type="file" name="procur_pdf" id="procur_pdf">
+                            <input type="file" name="uploadFile" id="uploadFile">
 
                             <p class="help-block">Example block-level help text here.</p>
                         </div>
@@ -42,25 +42,78 @@
                     <!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="button" name="addbtn" id="addbtn"  class="btn btn-primary">Submit</button>
+                        <input type="submit" id="uploadSubmit" value="upload" class="btn btn-primary">
                     </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                      <div class="tagetLayer"></div>
                 </form>
+                <div id="loader-icon" style="display: none"><img src="images/Loading_icon.gif"></div>
             </div>
             <!-- /.box -->
 
             <!-- Form Element sizes -->
+          
+               
+              <!-- Form Element sizes -->
             <div class="box box-success">
                 <div class="box-header with-border">
                     <h3 class="box-title">รายการข่าวประกวดราคา</h3>
                 </div>
                 <div class="box-body">
-                    <input class="form-control input-lg" type="text" placeholder=".input-lg">
-                    <br>
-                    <input class="form-control" type="text" placeholder="Default input">
-                    <br>
-                    <input class="form-control input-sm" type="text" placeholder=".input-sm">
+                    <table id="example" class="table table-bordered">
+
+                        <tr>
+                            <th style="width: 10px">#</th>
+                            <th>หัวข้อ</th>
+                            <th>วันที่</th>
+                            <th>ผู้เพิ่มรายการ</th>
+                            <th style="width:50px"> <button type="button" data-user-id=""
+
+                                            class="btn btn-sm btn-primary btn-add">เพิ่มรายการ</button></th>
+
+                            <th style="width: 50px"></th>
+                        </tr>
+
+                        <tbody class="show-list-data">
+                            <tr class="list-data">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button type="button" data-user-id=""
+
+                                            class="btn btn-sm btn-warning btn-update">Update</button>
+                                </td>
+                                <td>
+                                    <button data-user-id="" type="button" class="btn btn-sm btn-danger btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
                 </div>
                 <!-- /.box-body -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="javascript:void(0);" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="javascript:void(0);"></a></li>
+                        <li>
+                            <a href="javascript:void(0);" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <!-- /.box -->
             </div>
             <!-- /.box -->
         </div>
@@ -172,6 +225,14 @@
          */
         ?>
         <script type="text/javascript">
+            $("document").ready(function(){
+               $("#uploadForm").submit(function(e){
+                  if($("#uploadForm").val()){
+                      e.preventDefault()
+                      $("#upload-icon").show()
+                  }
+               });
+            });
             $("#addbtn").click(function () {
                 $.ajax({
                     type: "POST",

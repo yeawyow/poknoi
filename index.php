@@ -43,7 +43,7 @@ $Db = new MySqlConn;
         <script src="script/script.js"></script>
         <script src="script/lightbox/ekko-lightbox.js"></script>
         <script type="text/javascript">
-            $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            $(document).on('click', '[data-toggle="lightbox"]', function (event) { //lightbox
                 event.preventDefault();
                 $(this).ekkoLightbox();
             });
