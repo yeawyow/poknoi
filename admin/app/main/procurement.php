@@ -21,7 +21,7 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form"  id="uploadForm" name="uploadForm" method="POST" action="upload.php">
+              
                     <div class="box-body">
                         <div class="form-group">
                             <label for="exampleInputEmail1">หัวข้อ</label>
@@ -33,22 +33,21 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputFile">เพิ่มไฟล์</label>
-                            <input type="file" name="uploadFile" id="uploadFile">
+                            <input type="file"  name="procur_pdf" id="procur_pdf">
 
-                            <p class="help-block">Example block-level help text here.</p>
+                            <p class="help-block">คอมเมนต์ตรงนี้</p>
                         </div>
-                        <input type="hidden" name="action" id="action" value="add">
+                 
                     </div>
+                <div class=" box-footer btn btn-danger"  id="bnt">เพิ่ม</div>
                     <!-- /.box-body -->
 
-                    <div class="box-footer">
-                        <input type="submit" id="uploadSubmit" value="upload" class="btn btn-primary">
-                    </div>
+                
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                       <div class="tagetLayer"></div>
-                </form>
+                
                 <div id="loader-icon" style="display: none"><img src="images/Loading_icon.gif"></div>
             </div>
             <!-- /.box -->
@@ -225,23 +224,15 @@
          */
         ?>
         <script type="text/javascript">
-            $("document").ready(function(){
-               $("#uploadForm").submit(function(e){
-                  if($("#uploadForm").val()){
-                      e.preventDefault()
-                      $("#upload-icon").show()
-                  }
+          
+               $("#bnt").click(function(){
+                
+                      $.post("app/query/procurement_insert.php",{procur_title:$("#procur_title").val(),procur_date:$("#procur_date").val(),procur_pdf:$("#procur_pdf").val()},
+                      function(data){
+                        console.log(data);
+                      });
                });
-            });
-            $("#addbtn").click(function () {
-                $.ajax({
-                    type: "POST",
-                    url: "app/query/procurement_insert.php",
-                    data:$("#procurFrm").serialize(),
-success:function(data){
-  console.log(data);
-    
-}
-                });
-            });
+               
+           
+      
         </script>
