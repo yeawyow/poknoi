@@ -78,7 +78,7 @@ $Db = new MySqlConn;
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-
+   <script type="text/javascript" src="../script/jquery/jquery.form.min.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
