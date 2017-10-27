@@ -38,9 +38,7 @@
         </div>
     </div>
 </div>
-
 <div class="container">
-    <div class="col-md-9">
     <div class="row">
         <h2>ข่าวประชาสัมพันธ์:</h2>
 
@@ -67,44 +65,12 @@
     </div>
     <a href=""><div class="col-12 read-more " style="margin-bottom:5px;">รายการทั้งหมด</div> </a>
 </div>
-     <div class="col-md-3">
-    <div class="row">
-        <div class="minibox-header">
-            <p class="minibox-brand">
-                <span >ข่าวประกาศ</span>
-            </p>
-            
-        </div>
-        <?php
-        $sql = $Db->query('SELECT *  FROM announce  order by id desc limit 8', '');
-        foreach ($sql as $row) {
-            ?>
-
-            
-                <div class="minibox">
-                    <a href="?m=main&p=announce_content&id=<?php echo $row['id'] ?>&topic=<?php echo $row['topic'] ?>">
-                        
-                            <img src="img/<?php echo $row['image'] ?>" alt="<?php echo $row['topic']; ?>">
-                       
-
-                        <div class="figcaption">
-                            <p>
-                                <?php echo $row['topic']; ?></p>
-                        </div>
-                    </a>  
-                </div>
-            
-        <?php } ?>
-    </div>
-  
-</div>
-</div>
 <div class="container">
     <div class="row">
         <h2>รูปภาพกิจกรรม:</h2>
 
         <?php
-        $sql = $Db->query('SELECT *  FROM album  order by AlbumID desc limit 8', '');
+        $sql = $Db->query('SELECT *  FROM album  order by AlbumID desc limit 4', '');
         foreach ($sql as $row) {
             ?>
 
