@@ -1,10 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Ajax File Upload with jQuery and PHP - Demo</title>
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.form.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() { 
@@ -40,7 +33,7 @@ function beforeSubmit(){
 		
 		if( !$('#FileInput').val()) //check empty input filed
 		{
-			$("#output").html("Are you kidding me?");
+			$("#output").html("คุณยังไม่ได้เลือกไฟล์ PDF");
 			return false
 		}
 		
@@ -49,24 +42,7 @@ function beforeSubmit(){
 		
 
 		//allow file types 
-		switch(ftype)
-        {
-            case 'image/png': 
-			case 'image/gif': 
-			case 'image/jpeg': 
-			case 'image/pjpeg':
-			case 'text/plain':
-			case 'text/html':
-			case 'application/x-zip-compressed':
-			case 'application/pdf':
-			case 'application/msword':
-			case 'application/vnd.ms-excel':
-			case 'video/mp4':
-                break;
-            default:
-                $("#output").html("<b>"+ftype+"</b> Unsupported file type!");
-				return false
-        }
+		
 		
 		//Allowed file size is less than 5 MB (1048576)
 		if(fsize>5242880) 
@@ -111,13 +87,12 @@ function bytesToSize(bytes) {
 }); 
 
 </script>
-<link href="style/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+
+
 <div id="upload-wrapper">
 <div align="center">
 <h3>Ajax File Uploader</h3>
-<form action="processupload.php" method="post" enctype="multipart/form-data" id="MyUploadForm">
+<form action="app/main/procurement_upload.php" method="post" enctype="multipart/form-data" id="MyUploadForm">
 <input name="FileInput" id="FileInput" type="file" />
 <input type="submit"  id="submit-btn" value="Upload" />
 <img src="images/ajax-loader.gif" id="loading-img" style="display:none;" alt="Please Wait"/>
@@ -126,6 +101,3 @@ function bytesToSize(bytes) {
 <div id="output"></div>
 </div>
 </div>
-
-</body>
-</html>
