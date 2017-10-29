@@ -49,7 +49,7 @@ $Db = new MySqlConn;
             });
             
         </script>
-     
+<script type="text/javascript" src="includes/pdfobject.min.js"></script>
     </head>
 
     <body>

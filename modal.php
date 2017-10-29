@@ -464,7 +464,42 @@
     </div>
     
 </div>
+   <div class="modal fade" id="announce_file_content" tabindex="-1" role="dialog" aria-labelledby="announce_file_content">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+           
+            <div class="modal-body">
+                <div class="entry-content">
+                   <div class="login-box">
+  <div class="login-logo">
+  
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg"></p>
+
+  <div id="example1">
+                    ไม่ได้ติดตั้งโปรแกรม Adobe Reader หรือบราวเซอร์ไม่รองรับการแสดงผล PDF 
+                    <a href="modules/decree_pdf/คำแถลงการ61.pdf">คลิกที่นี้เพื่อดาวน์โหลดไฟล์ PDF</a>
+                </div>
+
+                <script>
+            var pdfname='คำแถลงการ61.pdf';      
+
+                    PDFObject.embed('modules/decree_pdf/'+ pdfname +" ' ", "#example1", {width: "100%", height: "600px"});
+
+
+                </script>
    
+  </div>
+                </div><!-- .entry-content -->
+            </div>
+
+        </div>
+    </div>
+</div>
+    </div>
+</div>
     <!-- Modal -->
 <div class="modal fade" id="loginFrm" tabindex="-1" role="dialog" aria-labelledby="loginFrm">
     <div class="modal-dialog modal-md" role="document">
@@ -508,6 +543,8 @@
 </div>
     </div>
 </div>
+    
+    
     <script type="text/javascript">
    $("#login").click(function () {
     $.ajax({

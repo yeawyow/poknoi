@@ -80,11 +80,11 @@
         foreach ($sql as $row) {
             ?>
 
-            
+          
                 <div class="minibox">
-                    <a href="?m=main&p=announce_content&id=<?php echo $row['id'] ?>&topic=<?php echo $row['topic'] ?>">
+                    <a href="#" data-toggle="modal" data-target="#announce_file_content">
                         
-                            <img src="img/<?php echo $row['image'] ?>" alt="<?php echo $row['topic']; ?>">
+                            <img src="img/anuone.png ?>" alt="<?php echo $row['topic']; ?>">
                        
 
                         <div class="figcaption">
