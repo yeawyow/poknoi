@@ -135,6 +135,7 @@
     border-radius: 4px 4px 0 0;
 }
 .figcaption {
+    width: 100%;
       color: #ffffff;
     position: absolute;
     bottom: 0;

@@ -1,4 +1,3 @@
-<!-- Inspired by https://codepen.io/transportedman/pen/NPWRGq -->
 
 <div class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -76,15 +75,15 @@
             
         </div>
         <?php
-        $sql = $Db->query('SELECT *  FROM announce  order by id desc limit 8', '');
+        $sql = $Db->query('SELECT *  FROM announce_file  order by id desc limit 8', '');
         foreach ($sql as $row) {
             ?>
 
           
                 <div class="minibox">
-                    <a href="#" data-toggle="modal" data-target="#announce_file_content">
+                    <a href="?m=main&p=announce_pdf_content&id=<?php echo $row['id'] ?>&topic=<?php echo $row['topic'] ?>" target="_bank">
                         
-                            <img src="img/anuone.png ?>" alt="<?php echo $row['topic']; ?>">
+                            <img src="img/anuone.png" alt="<?php echo $row['topic']; ?>">
                        
 
                         <div class="figcaption">
